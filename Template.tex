@@ -1,0 +1,209 @@
+%% %%=================================================================
+%% %% <UTF-8>
+%% %% 北航学术论文模板使用样例
+%% %% 请将以下文件与此LaTeX文件放在同一目录中.
+%% %%-----------
+%% %% buaa.cls              : LaTeX宏模板文件
+%% %% GBT7714-2005.bst      : 国标参考文献BibTeX样式文件2005(https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
+%% %% GBT7714-2015.bst      : 国标参考文献BibTeX样式文件2015(https://github.com/zepinglee/gbt7714-bibtex-style)
+%% %% logo-buaa.eps         : 论文封皮北航字样
+%% %% head-doctor.eps       : 论文封皮北博士学术论文标题(华文行楷字体替代解决方案)
+%% %% head-master.eps       : 论文封皮北学硕学术论文标题(华文行楷字体替代解决方案)
+%% %% head-professional.eps : 论文封皮北专硕学术论文标题(华文行楷字体替代解决方案)
+%% %% tex/*.tex             : 本模板样例中的独立章节
+%% %%-----------
+%% %% 请统一使用UTF-8编码.
+%% %%=================================================================
+
+%=================================================================
+\documentclass[doctor,privacy,twoside]{buaa}
+%=================================================================
+% buaa基于ctexbook模板
+% 论文样式参考自《研究生手册--二〇一五年八月》
+%======================
+% 模板选项:
+%======================
+% I.论文类型(thesis)
+%--------------------
+% a.学术硕士论文（master）<缺省值>
+% b.专业硕士论文（professional）
+% c.博士论文（doctor）
+%--------------------
+% II.密级(permission)
+%--------------------
+% a.公开（public）<缺省值>
+% b.内部（privacy）
+% c.秘密（secret=secret3）
+% c.1.秘密3年（secret3）
+% c.2.秘密5年（secret5）
+% c.3.秘密10年（secret10）
+% c.4.秘密永久（secret*）
+% d.机密（classified=classified5）
+% d.1.机密3年（classified3）
+% d.2.机密5年（classified5）
+% d.3.机密10年（classified10）
+% d.4.机密永久（classified*）
+% e.绝密（topsecret=topsecret10）
+% e.1.绝密3年（topsecret3）
+% e.2.绝密5年（topsecret5）
+% e.3.绝密10年（topsecret10）
+% e.4.绝密永久（topsecret*）
+%--------------------
+% III.打印设置(printtype)
+%--------------------
+% a.单面打印（onside）<缺省值>
+% b.双面答应（twoside）
+%--------------------
+%=================================================================
+
+
+%=================================================================
+% 开启/关闭引用编号颜色：参考文献，公式，图，表，算法 等……
+\refcolor{on}   % 开启: on<默认>; 关闭: off;
+% 摘要和正文从右侧开始
+\beginright{on} % 开启: on<默认>; 关闭: off;
+% 空白页留字
+\emptypagewords{[ -- This page is a preset empty page -- ]}
+
+%=================================================================
+% buaa模板已内嵌以下LaTeX工具包:
+%--------------------
+% ifthen, etoolbox, titletoc, remreset, remreset,
+% geometry, fancyhdr, setspace, caption,
+% float, graphicx, subfigure, epstopdf,
+% booktabs, longtable, multirow, 
+% array, enumitem
+% algorithm2e, amsmath, amsthm, listings
+% pifont, color, soul
+%--------------------
+% 请在此处添加额外工具包>> 
+
+
+%=================================================================
+% buaa模板已内嵌以下LaTeX宏:
+%--------------------
+% \highlight{text} % 黄色高亮
+%--------------------
+% 请在此处添加自定义宏>> 
+
+
+%%=================================================================
+% 论文题目及副标题-{中文}{英文}
+\Title{北航博硕士学术论文\LaTeX模板\BUAAThesis}{\LaTeX{} Template of Beihang University Thesis \BUAAThesis }
+\Subtitle{版本 \BUAAThesisVer}{Version \BUAAThesisVer}
+
+% 学科大类,默认工学
+% \Branch{工学}
+
+% 院系,专业及研究方向
+\Department{宇航学院}
+\Major{控制科学与工程}
+\Feild{模式识别与智能系统}
+
+% 导师信息-{中文名}{英文名}{职称}
+\Tutor{导师姓名}{Toutor}{教授}
+\Cotutor{副导师姓名}{Cotutor}{高工}
+
+% 学生姓名-{中文名}{英文名}
+\Author{学生姓名}{Student}
+% 学生学号
+\StudentID{ID123456}
+
+% 中图分类号
+\CLC{TP391.4}
+
+% 时间节点-{月}{日}{年}
+\DateEnroll{09}{01}{2015}
+\DateGraduate{03}{31}{2018}
+\DateSubmit{01}{10}{2018}
+\DateDefence{03}{01}{2018}
+
+%%=================================================================
+% 摘要-{中文}{英文}
+\Abstract{%
+  摘要是学术论文内容的简短陈述，应体现论文工作的核心思想。论文摘要应力求语言精炼准确。博士学术论文的中文摘要一般约800~1200字；硕士学位论文的中文摘要一般约500字。摘要内容应涉及本项科研工作的目的和意义、研究思想和方法、研究成果和结论。博士学位论文必须突出论文的创造性成果，硕士学位论文必须突出论文的新见解。
+  
+  关键字是为用户查找文献，从文中选取出来揭示全文主体内容的一组词语或术语，应尽量采用词表中的规范词（参考相应的技术术语标准）。关键词一般3~5个，按词条的外延层次排列（外延大的排在前面）。关键词之间用逗号分开，最后一个关键词后不打标点符号。
+  
+  为了国际交流的需要，论文必须有英文摘要。英文摘要的内容及关键词应与中文摘要及关键词一致，要符合英语语法，语句通顺，文字流畅。英文和汉语拼音一律为Times New Roman体，字号与中文摘要相同。
+  }{%
+  What were you doing 500 years ago? Oh, that’s right nothing, because you didn’t exist yet. In fact, several generations of your family had yet to leave their mark on the world, but one very special shark may already have been swimming in the chilly North Atlantic at that time, and the incredible animal is somehow still alive today.
+  
+  Scientists studying Greenland sharks observed the particularly old specimen just recently, and after studying it they’ve determined that the creature is approximately 272 to 512 years old. That’s an absolutely insane figure, and if its age lands towards the higher end, it makes the animal the oldest observed living vertebrate on the entire planet.
+  
+  Greenland sharks are an incredible species in a number of ways, but most notable is its longevity. The sharks are well over 100 years old before even reaching sexual maturity, and regularly live for centuries. This particularly old specimen, along with 27 others, were analyzed using radiocarbon dating. The reading came back at around 392 years, but potential margin of error means the animal’s true age is somewhere between 272 and 512.
+  
+  The shark, which is a female, measures an impressive 18 feet long. That’s pretty large, but it might not sound particularly large for an ocean-dwelling creature that lives hundreds of years. That is, until you consider that the Greenland shark only grows around one centimeter per year. With that in mind, 18 feet is actually downright massive.
+  
+  As for how this particular shark species manages to live so incredibly long, scientists attribute a lot of its longevity to its sluggish metabolism, as well as its environment. The frigid waters where the sharks thrive is thought to increase overall lifespan in a variety of ways. Past research has shown that cold environments can help slow aging, and these centuries-old sharks are most certainly benefiting from their chilly surroundings.
+  
+  --- Online news {\it Scientists find incredible shark that may be over 500 years old and still kicking\/}, 12.16.2017. (http://bgr.com/2017/12/14/oldest-shark-greenland-512-years-old/).
+}
+% 关键字-{中文}{英文}
+\Keyword{%
+    北航，学术论文，博士，硕士，专业硕士，中文，\LaTeX模板，\BUAAThesis
+  }{%
+    News, BGR, Shark
+}
+
+% 图标目录
+\Listfigtab{on} % 启用: on<默认>; 关闭: off;
+
+% 缩写定义 按tabular环境或其他列表环境编写
+\Abbreviations{ \centering
+\begin{tabular}{cl}
+  $E$ & 能量 \\
+  $m$ & 质量 \\
+  $c$ & 光速 \\
+  $P$ & 概率 \\
+  $T$ & 时间 \\
+  $v$ & 速度 \\
+\end{tabular}
+}
+
+\begin{document}
+
+%%=================================================================
+% 标题级别
+%--------------------
+% \chapter{第一章}
+% \section{1.1 小节}
+% \subsection{1.1.1 条}
+% \subsubsection{1.1.1.1}
+% \paragraph{1.1.1.1.1}
+% \subparagraph{1.1.1.1.1.1}
+%--------------------
+%%=================================================================
+
+% 绪论
+\input{tex/chap_intro}
+
+
+% 说明
+\input{tex/chap_instruction}
+
+% 示例
+\input{tex/chap_sample}
+
+% 总结
+\input{tex/chap_summary}
+
+% 参考文献
+% 2015版国标GBT7714-2015
+% 2005版国标GBT7714-2005
+\bibliographystyle{GBT7714-2015}
+\bibliography{ref}
+
+% 附录
+\input{tex/chap_appendix}
+
+% 攻读学位期间成果
+\input{tex/chap_achievement}
+
+% 致谢
+\input{tex/chap_acknowledge}
+
+% 作者简介
+\input{tex/chap_biography}
+
+\end{document}

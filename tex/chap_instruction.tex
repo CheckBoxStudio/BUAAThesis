@@ -1,0 +1,130 @@
+% 本LaTeX模板的一般使用说明
+\chapter{说明}
+
+Again，这是北航论文 \LaTeX 模板（\CTeX-Based）\BUAAThesis。
+
+本\LaTeX模板为北航研究生学术论文模板，适用于理工类博士、学术硕士和专业硕士。本\LaTeX模板参考自2015年8月版北航《研究生手册》（以下简称《手册》），具体要求请参见各自的《手册》，最终成文格式需参考学院要求及打印方意见。本模板中大量内容和说明直接摘抄自《手册》（2015年8月版），基本覆盖了论文内容和格式方面的要求。
+
+本模板已上传\href{https://github.com/CheckBoxStudio/BUAAThesis}{GitHub}，该仓库中同时也包含了相应的Word模板。
+
+%-----------------------------
+\section{宏包使用}
+
+请将以下文件与此LaTeX文件放在同一目录中：
+
+\begin{tabular}{ll}
+ \verb|buaa.cls |              & $\triangleright$ LaTeX宏模板文件 \\
+ \verb|GBT7714-2005.bst|       & $\triangleright$ 国标参考文献BibTeX样式文件2005 \\
+ \verb|GBT7714-2015.bst|      & $\triangleright$ 国标参考文献BibTeX样式文件2015 \\
+ \verb|logo-buaa.eps|         & $\triangleright$论文封皮北航字样 \\
+ \verb|head-doctor.eps|       & $\triangleright$论文封皮北博士学术论文标题\\
+ \verb|head-master.eps|       & $\triangleright$ 论文封皮北学硕学术论文标题 \\
+ \verb|head-professional.eps| & $\triangleright$ 论文封皮北专硕学术论文标题\\
+ \verb|tex/*.tex|             & $\triangleright$本模板样例中的独立章节\\
+\end{tabular}\\
+
+通过 \verb|\documentclass[<thesis>,<permission>,<printtype>]{buaa}|载入宏包：
+\begin{itemize}[leftmargin=3cm]
+  \item[{\tt thesis} $\triangleright$]  论文类型(thesis)，可选值：\\
+    a) 学术硕士论文（\verb|master|）[缺省值]\\
+    b) 专业硕士论文（\verb|professional|）\\
+    c) 博士论文（\verb|doctor|）
+  \item[{\tt permission} $\triangleright$] 密级(permission)，可选值： \\
+    a) 公开（\verb|public|）[缺省值]\\
+    b) 内部（\verb|privacy|）\\
+    c) 秘密（\verb|secret|=\verb|secret3|）\\
+    --- c.1) 秘密3年（\verb|secret3|）\\
+    --- c.2) 秘密5年（\verb|secret5|）\\
+    --- c.3) 秘密10年（\verb|secret10|）\\
+    --- c.4) 秘密永久（\verb|secret*|）\\
+    d) 机密（\verb|classified|=\verb|classified5|）\\
+    --- d.1) 机密3年（\verb|classified3|）\\
+    --- d.2) 机密5年（\verb|classified5|）\\
+    --- d.3) 机密10年（\verb|classified10|）\\
+    --- d.4) 机密永久（\verb|classified*|）\\
+    e) 绝密（\verb|topsecret|=\verb|topsecret10|）\\
+    --- e.1) 绝密3年（\verb|topsecret3|）\\
+    --- e.2) 绝密5年（\verb|topsecret5|）\\
+    --- e.3) 绝密10年（\verb|topsecret10|）\\
+    --- e.4) 绝密永久（\verb|topsecret*|）
+  \item[{\tt printtype} $\triangleright$] 打印属性(printtype)，可选值： \\
+    a) 单面打印（\verb|onside|）[缺省值]\\
+    b) 双面答应（\verb|twoside|）
+\end{itemize}
+
+模板已内嵌LaTeX工具包：
+ {\tt ifthen}，{\tt etoolbox}，{\tt titletoc}，{\tt remreset}，{\tt remreset},
+ {\tt geometry}，{\tt fancyhdr}，{\tt setspace}，{\tt caption}，{\tt float}，
+ {\tt graphicx}，{\tt subfigure}，{\tt epstopdf},
+ {\tt book\-tabs}，{\tt longtable}，{\tt multirow}，{\tt array}, {\tt enumitem}，
+ {\tt algorithm2e}，{\tt amsmath}，{\tt amsthm}, {\tt listings},
+ {\tt pifont}，{\tt color}，{\tt soul}。
+
+模板已内嵌宏：\verb|\highlight{text}|（黄色高亮）。
+ 
+请统一使用UTF-8编码。
+
+
+
+%-----------------------------
+\section{选项设置}
+
+\begin{itemize}[leftmargin=3cm]
+  \item[{\tt  $\backslash$refcolor} $\triangleright$]  开启/关闭引用编号颜色，包括参考文献，公式，图，表，算法等\\
+  \texttt{on}：开启 [默认]\\
+  \texttt{off}：关闭
+  \item[{\tt $\backslash$beginright} $\triangleright$]  摘要和正文从右侧开始\\
+  \texttt{on}：开启 [默认]\\
+  \texttt{off}：关闭
+  \item[{\tt $\backslash$emptypageword} $\triangleright$]  空白页留字
+  \item[{\tt $\backslash$Listfigtab} $\triangleright$]  是否使用图标清单目录\\
+  \texttt{on}：开启 [默认]\\
+  \texttt{off}：关闭
+\end{itemize}
+
+
+%-----------------------------
+\section{章节撰写}
+本模板支持一下标题级别标题级别
+
+\begin{tabular}{ll}
+  \verb|\chapter{章}|              & $\triangleright$ 第一章 \\
+  \verb|\chapter*{无章号章}|       & $\triangleright$ 无章号章 \\
+  \verb|\chaptera{无章有目录章}|   & $\triangleright$ 无章有目录章 \\
+  \verb|\summary|                  & $\triangleright$ 总结\\
+  \verb|\appendix|                 & $\triangleright$ 附录\\
+  \verb|\achievement|              & $\triangleright$ 攻读学位期间取得的成果\\
+  \verb|\acknowledgments|          & $\triangleright$ 致谢\\
+  \verb|\biography|                & $\triangleright$ 作者简介\\
+  \verb|\section{节}|              & $\triangleright$ 1.1 节\\
+  \verb|\subsection{条}|           & $\triangleright$ 1.1.1 条\\
+  \verb|\subsubsection{A}|         & $\triangleright$ 1.1.1.1 A\\
+  \verb|\paragraph{a}|             & $\triangleright$ 1.1.1.1.1 a\\
+  \verb|\subparagraph{a)}|         & $\triangleright$ 1.1.1.1.1.1 a)\\
+\end{tabular}
+
+%-----------------------------
+\section{注意事项}
+\begin{itemize}
+  \item[$\triangleright$] 暂无中文斜体；
+  \item[$\triangleright$] 中文粗体将转换为楷体；
+  \item[$\triangleright$] 行末针对标点的断行不好，例如\ref{sec:error1}处的有个“、”被断在了句首；
+  \item[$\triangleright$] \verb|\label{<text>}|中不能使用中文；
+  \item[$\triangleright$] 浮动体与正文之间的距离是弹性的；
+\end{itemize}
+
+%-----------------------------
+\section{ToDo}
+\begin{itemize}
+  \item[$\triangleright$] 数学环境的行间隔；
+  \item[$\triangleright$] 参考文献的行间隔；
+\end{itemize}
+
+%-----------------------------
+\section{意见及问题反馈}
+
+\indent E-mail：weiqm@buaa.edu.cn
+
+\indent GitHub：\href{https://github.com/CheckBoxStudio/BUAAThesis/issues}{https://github.com/CheckBoxStudio/BUAAThesis/issues}
+
+
