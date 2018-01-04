@@ -48,7 +48,7 @@ BUAAThesis
 
 ## 致谢
 
-感谢[Haixing Hu](https://github.com/Haixing-Hu)提供的2005版参考文献著录BibTeX样式[GBT7714-2005](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)及[Zeping Lee](https://github.com/zepinglee)提供的2015版参考文献著录BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)，为本项目LaTeX模板的形成提供了很大的帮助。感谢[一碟小菜](No_where_to_find)提供的Mac编译环境。
+感谢[Haixing Hu](https://github.com/Haixing-Hu)提供的2005版参考文献著录BibTeX样式[GBT7714-2005](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)及[Zeping Lee](https://github.com/zepinglee)提供的2015版参考文献著录BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)，为本项目LaTeX模板的形成提供了很大的帮助。感谢[BwCai](https://github.com/BwCai)提供的Mac编译环境。
 
 ***
 
