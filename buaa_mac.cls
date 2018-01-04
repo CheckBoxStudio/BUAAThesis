@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板 - LaTeX 12-17-2017
+%% %% 北航研究生毕业论文模板(Mac版) - LaTeX 01-04-2018
 %% %% 论文样式参考自《研究生手册--二〇一五年八月》
 %% %% 基于ctexbook
 %% %%
@@ -9,18 +9,18 @@
 %% %% 参与修改:
 %% %%
 %% %% Versions:
-%% %%   v1.0a Wei Quanmao (12-17-2017)
+%% %%   v1.0a Wei Quanmao (01-04-2018)
 %% %%
 %% %% 建议采用等宽字体查看本文档
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2017/12/17 v1.0a BUAA thesis class]
-\typeout{This is LaTeX template buaa, Version 1.0a (based on CTex) 12-17-2017, by Wei Quanmao}
+\ProvidesClass{buaa}[2018/01/04 v1.0a BUAA thesis class for Mac]
+\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 1.0a (based on CTex) 01-04-2018, by Wei Quanmao}
 
 \usepackage{graphicx}
-\def\BUAAThesisVer{v1.0a 12-17-2017}
+\def\BUAAThesisVer{v1.0a 01-04-2018}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -45,6 +45,7 @@
 \RequirePackage{fancyhdr}     % 设置页眉页脚
 \RequirePackage{setspace}     % 设置行间距
 \RequirePackage{times}        % Times New Roman字体
+\RequirePackage{fontspec}     % 字体设置(!Only for XeLaTeX!)
 \RequirePackage{float}        % 图片
 \RequirePackage{graphicx}     % 图片
 \RequirePackage{subfigure}    % 图片
@@ -138,6 +139,10 @@
 \ProcessOptions\relax
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 字体设置
+% 英语字体设置(!Only for XeLaTeX!)
+\setmainfont{Times New Roman}
+
 %% 数学环境
 % 数学符号：
 \newcommand\eu{\mathrm{e}}
@@ -269,10 +274,10 @@
 \ctexset{%
   chapter={%章标题 : 三号黑体居中 单倍行距 段前/段后0.5行 另起新页
     format=\zihao{3} \heiti \centering \thispagestyle{fancy},
-    fixskip=true,
+    %fixskip=true,% Not Support by XeLaTeX
     beforeskip=19.27pt,
     afterskip=22.48pt,
-    break=\clearpage,
+    %break=\clearpage,% Not Support by XeLaTeX
   },
   section={%节标题 : 四号黑体居左 单倍行距 段前/段后0.5行
     format=\zihao{4} \heiti \raggedright,
@@ -420,6 +425,7 @@
     \errmessage{Please use 'on' of 'off' for listfigtab.}}
   }
 }
+\renewcommand\cleardoublepage{\clearpage}
 \newcommand{\clearautopage}{%右侧起新页
   \clearpage
   \ifthenelse{\equal{\@printtype}{twoside}}{% 双面

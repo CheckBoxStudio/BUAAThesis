@@ -14,6 +14,7 @@
 ```
 BUAAThesis
  |- buaa.cls              // LaTeX宏模板文件
+ |- buaa_mac.cls          // LaTeX宏模板文件(For Mac with XeLaTeX)
  |- GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
  |- GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
  |- logo-buaa.eps         // 论文封皮北航字样
@@ -32,7 +33,7 @@ BUAAThesis
 
 + Word: 直接在其上进行修改编写，请记得预先备份
 + LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex
-
++ Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译
 ## 建议及问题反馈
 
 + E-mail: [weiqm@buaa.edu.cn](weiqm@buaa.edu.cn)
@@ -40,14 +41,14 @@ BUAAThesis
 
 ## 我的环境
 
-+ Windows10 64bits
++ Windows 10 64bits
 + TeXStudio 2.12.4
 + MiKTeX 2.9
 + CTeX 2017-07-18
 
 ## 致谢
 
-感谢[Haixing Hu](https://github.com/Haixing-Hu)提供的2005版参考文献著录BibTeX样式[GBT7714-2005](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)及[Zeping Lee](https://github.com/zepinglee)提供的2015版参考文献著录BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)，为本项目LaTeX模板的形成提供了很大的帮助。
+感谢[Haixing Hu](https://github.com/Haixing-Hu)提供的2005版参考文献著录BibTeX样式[GBT7714-2005](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)及[Zeping Lee](https://github.com/zepinglee)提供的2015版参考文献著录BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)，为本项目LaTeX模板的形成提供了很大的帮助。感谢[一碟小菜](No_where_to_find)提供的Mac编译环境。
 
 ***
 

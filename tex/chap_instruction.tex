@@ -13,8 +13,9 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
 请将以下文件与此LaTeX文件放在同一目录中：
 
 \begin{tabular}{ll}
- \verb|buaa.cls |              & $\triangleright$ LaTeX宏模板文件 \\
- \verb|GBT7714-2005.bst|       & $\triangleright$ 国标参考文献BibTeX样式文件2005 \\
+ \verb|buaa.cls |             & $\triangleright$ LaTeX宏模板文件 \\
+ \verb|buaa_mac.cls |         & $\triangleright$ LaTeX宏模板文件(For Mac with XeLaTeX) \\
+ \verb|GBT7714-2005.bst|      & $\triangleright$ 国标参考文献BibTeX样式文件2005 \\
  \verb|GBT7714-2015.bst|      & $\triangleright$ 国标参考文献BibTeX样式文件2015 \\
  \verb|logo-buaa.eps|         & $\triangleright$论文封皮北航字样 \\
  \verb|head-doctor.eps|       & $\triangleright$论文封皮北博士学术论文标题\\
@@ -111,6 +112,7 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
   \item[$\triangleright$] 行末针对标点的断行不好，例如\ref{sec:error1}处的有个“、”被断在了句首；
   \item[$\triangleright$] \verb|\label{<text>}|中不能使用中文；
   \item[$\triangleright$] 浮动体与正文之间的距离是弹性的；
+  \item[$\triangleright$] 命令符与汉字之间请注意加空格以避免undefined错误（pdfLaTeX下好像一般不存在这个问题，主要在XeLaTeX编译环境下发生）；
 \end{itemize}
 
 %-----------------------------
@@ -118,6 +120,7 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
 \begin{itemize}
   \item[$\triangleright$] 数学环境的行间隔；
   \item[$\triangleright$] 参考文献的行间隔；
+  \item[$\triangleright$] 参考文献作者大写；
 \end{itemize}
 
 %-----------------------------

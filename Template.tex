@@ -4,6 +4,7 @@
 %% %% 请将以下文件与此LaTeX文件放在同一目录中.
 %% %%-----------
 %% %% buaa.cls              : LaTeX宏模板文件
+%% %% buaa_mac.cls          : LaTeX宏模板文件(For Mac with XeLaTeX)
 %% %% GBT7714-2005.bst      : 国标参考文献BibTeX样式文件2005(https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
 %% %% GBT7714-2015.bst      : 国标参考文献BibTeX样式文件2015(https://github.com/zepinglee/gbt7714-bibtex-style)
 %% %% logo-buaa.eps         : 论文封皮北航字样
@@ -17,6 +18,10 @@
 
 %=================================================================
 \documentclass[doctor,privacy,twoside]{buaa}
+
+%% Mac系统请使用buaa_mac，并使用XeLaTeX编译。
+%\documentclass[doctor,privacy,twoside]{buaa_mac}
+
 %=================================================================
 % buaa基于ctexbook模板
 % 论文样式参考自《研究生手册--二〇一五年八月》
