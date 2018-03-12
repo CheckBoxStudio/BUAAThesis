@@ -62,7 +62,7 @@
 \RequirePackage{amsthm}       % 定理
 \RequirePackage{titletoc}     % 目录
 \RequirePackage{remreset}     % 计数器设置
-\RequirePackage{hyperref}     % 超连接
+\RequirePackage{hyperref}     % 超链接
 \RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
 \RequirePackage{pifont}       % 画五角星
 \RequirePackage{color}        % To provide color for soul
@@ -443,7 +443,7 @@
     \fi
   }{}
 }
-\newcommand{\sethyper}{%设置连接应用颜色
+\newcommand{\sethyper}{%设置链接引用颜色
   \hypersetup{%
     pdftitle={\@titlecn},
     pdfkeywords={\@keywordcn},
@@ -819,6 +819,11 @@
 \newcommand{\summary}{%结论
   \ctexset{chapter/numbering=false}
   \chapter{结~~~~论}
+}
+\newcommand{\Bib}[2]{%参考文献
+  \bibliographystyle{#1}
+  \addcontentsline{toc}{chapter}{参考文献}
+  \bibliography{#2}
 }
 \renewcommand{\appendix}{% 附录
   \ctexset{chapter/numbering=false}
