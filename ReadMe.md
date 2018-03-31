@@ -2,7 +2,7 @@
 
 **本模板仅为个人兴趣之作，非官方模板.**
 
-本项目为北京航空航天大学学位论文模板BUAAThesis，包含Word模板和LaTeX模板(基于ctexbook)。模板按照2015年8月版《研究生手册》制定，适用于理工类博士、硕士、专业硕士学位论文（中文）。
+本项目为北京航空航天大学学位论文模板BUAAThesis，包含Word模板和LaTeX模板(基于[ctexbook](https://ctan.org/pkg/ctex))。模板按照2015年8月版《研究生手册》制定，适用于理工类博士、硕士、专业硕士学位论文（中文）。
 
 
 ## 下载地址
@@ -52,4 +52,4 @@ BUAAThesis
 
 ***
 
-By [WeiQM](https://github.com/weiquanmao), Jan 2018.
+By [WeiQM](https://weiquanmao.github.io/) at D409.IPC.BUAA.
