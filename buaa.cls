@@ -488,39 +488,42 @@
   \ifthenelse{\equal{#1}{电子信息工程学院}}{School of Electronic and Information Engineering}{%
   \ifthenelse{\equal{#1}{自动化科学与电气工程学院}}{School of Automation Science and Electronic Engineering}{%
   \ifthenelse{\equal{#1}{能源与动力工程学院}}{School of Energy and Power Engineering}{%
-  \ifthenelse{\equal{#1}{航空科学与工程学院}}{School of Aeronautical Science and Electrical Engineering}{%
+  \ifthenelse{\equal{#1}{航空科学与工程学院}}{School of Aeronautic Science and Engineering}{%
   \ifthenelse{\equal{#1}{计算机学院}}{School of Computer Science and Engineering}{%
   \ifthenelse{\equal{#1}{机械工程及自动化学院}}{School of Mechanical Engineering and Automation}{%
   \ifthenelse{\equal{#1}{经济管理学院}}{School of Economics and Management}{%
-  \ifthenelse{\equal{#1}{数学与系统科学学院}}{School of Mathmatics and System Science}{%
+  \ifthenelse{\equal{#1}{数学与系统科学学院}}{School of Mathematics and Systems Science}{%
   \ifthenelse{\equal{#1}{生物与医学工程学院}}{School of Biological Science and Medical Engineering}{%
-  \ifthenelse{\equal{#1}{人文社会科学学院}}{School of Humanities and Social Science}{%
-  \ifthenelse{\equal{#1}{公共管理学院}}{School of Humanities and Social Science}{%
-  \ifthenelse{\equal{#1}{人文社会科学学院（公共管理学院）}}{School of Humanities and Social Science}{%
-  \ifthenelse{\equal{#1}{人文社会科学学院(公共管理学院)}}{School of Humanities and Social Science}{%
-  \ifthenelse{\equal{#1}{外国语学院}}{Department of Foreign Languages}{%
+  \ifthenelse{\equal{#1}{人文社会科学学院}}{School of Humanities and Social Sciences}{%
+  \ifthenelse{\equal{#1}{公共管理学院}}{School of Humanities and Social Sciences}{%
+  \ifthenelse{\equal{#1}{人文社会科学学院（公共管理学院）}}{School of Humanities and Social Sciences}{%
+  \ifthenelse{\equal{#1}{人文社会科学学院(公共管理学院)}}{School of Humanities and Social Sciences}{%
+  \ifthenelse{\equal{#1}{外国语学院}}{School of Foreign Languages}{%
   \ifthenelse{\equal{#1}{交通科学与工程学院}}{School of Transportation Science and Engineering}{%
-  \ifthenelse{\equal{#1}{可靠性与系统工程学院}}{Department of Sytem Engineering of Engineering Technology}{%
+  \ifthenelse{\equal{#1}{可靠性与系统工程学院}}{School of Reliability and Systems Engineering}{%
   \ifthenelse{\equal{#1}{宇航学院}}{School of Astronautics}{%
-  \ifthenelse{\equal{#1}{飞行学院}}{Flying College}{%
-  \ifthenelse{\equal{#1}{仪器科学与光电工程学院}}{School of Instrument Science & Opto-Electronics Engineering}{%
+  \ifthenelse{\equal{#1}{飞行学院}}{Flight College}{%
+  \ifthenelse{\equal{#1}{仪器科学与光电工程学院}}{School of Instrumentation Science and Opto-electronics Engineering}{%
   \ifthenelse{\equal{#1}{北京学院}}{School of Beijing}{%
   \ifthenelse{\equal{#1}{物理科学与核能工程学院}}{School of Physics and Nuclear Energy Engineering}{%
-  \ifthenelse{\equal{#1}{法学院}}{The Law School}{%
-  \ifthenelse{\equal{#1}{软件学院}}{College of Software}{%
+  \ifthenelse{\equal{#1}{法学院}}{School of Law}{%
+  \ifthenelse{\equal{#1}{软件学院}}{School of Software}{%
   \ifthenelse{\equal{#1}{继续教育学院}}{College of Continuing Education}{%
   \ifthenelse{\equal{#1}{高等理工学院}}{School of Advance Engineering}{%
-  \ifthenelse{\equal{#1}{中法工程师学院}}{Sino-French Engineering School}{%
-  \ifthenelse{\equal{#1}{国际学院}}{International School}{%
+  \ifthenelse{\equal{#1}{中法工程师学院}}{Central Pekin}{%
+  \ifthenelse{\equal{#1}{国际学院}}{Beihang School}{%
   \ifthenelse{\equal{#1}{新媒体艺术与设计学院}}{School of New Media Art and Design}{%
-  \ifthenelse{\equal{#1}{化学学院}}{School of Chemistry and Environment}{%
-  \ifthenelse{\equal{#1}{马克思主义学院}}{}{%
-  \ifthenelse{\equal{#1}{无人系统研究院}}{}{%
+  \ifthenelse{\equal{#1}{化学学院}}{School of Chemistry}{%
+  \ifthenelse{\equal{#1}{马克思主义学院}}{School of Marxism}{%
+  \ifthenelse{\equal{#1}{无人系统研究院}}{Unmanned System Institute}{%
   \ifthenelse{\equal{#1}{人文与社会科学高等研究院}}{Institue for Advanced Studies in Humanities and Social Science}{%
   \ifthenelse{\equal{#1}{空间与环境学院}}{School of Space and Environment}{%
   \ifthenelse{\equal{#1}{国际通用工程学院}}{School of General Engineering}{%
   \ifthenelse{\equal{#1}{国际交叉科学研究院}}{International Research Institue for Multidisciplinary Science}{%
-  }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+  \ifthenelse{\equal{#1}{医工交叉创新研究院}}{Interdisciplinary Innovation Institute for Medicine and Engineering}{%
+  \ifthenelse{\equal{#1}{北斗丝路学院}}{School of BeiDou and the Silk Road}{%
+  \ifthenelse{\equal{#1}{网络空间安全学院}}{School of Cyberspace Security}{%
+  }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
