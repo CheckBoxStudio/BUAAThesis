@@ -9,6 +9,7 @@
 %% %% 参与修改:
 %% %%
 %% %% Versions:
+%% %%   v1.2  Wei Quanmao (07-31-2018)
 %% %%   v1.1  Wei Quanmao (01-04-2018)
 %% %%   v1.0a Wei Quanmao (12-17-2017)
 %% %%
@@ -17,7 +18,7 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2018/01/04 v1.1 BUAA thesis class]
+\ProvidesClass{buaa}[2018/07/31 v1.2 BUAA thesis class]
 \typeout{This is LaTeX template buaa, Version 1.1 (based on CTex) 01-04-2018, by Wei Quanmao}
 
 \usepackage{graphicx}
@@ -704,7 +705,7 @@
       }       \\
       指导老师姓名 &          \multicolumn{3}{l}{\@tutorcn}                    & 职\hspace{2\ccwd}称 &                        \multicolumn{3}{l}{\@tutordegree}                      \\
       学科专业     &          \multicolumn{3}{l}{\@major}                      & 研究方向            &                        \multicolumn{3}{l}{\@feild}                            \\
-      学习时间自   & \@dateenrolly\ 年 & \@dateenrollm\ 月 & \@dateenrolld\ 日 & \hspace{2\ccwd}起至 & \@dategraduatey\ 年 & \@dategraduatem\ 月 & \@dategraduated\ 日止             \\
+      学习时间自   & \@dateenrolly\ 年 & \@dateenrollm\ 月 & \@dateenrolld\ 日 & 起至                & \@dategraduatey\ 年 & \@dategraduatem\ 月 & \@dategraduated\ 日止             \\
       论文提交日期 & \@datesubmity\ 年 & \@datesubmitm\ 月 & \@datesubmitd\ 日 & 论文答辩日期        & \@datedefencey \ 年 & \@datedefencem \ 月 & \@datedefenced \ 日\hspace{\ccwd} \\
       学位授予单位 &          \multicolumn{3}{l}{北京航空航天大学}             & 学位授予日期        &                  年 &                  月 &                  日\hspace{\ccwd} \\
     \end{tabular}

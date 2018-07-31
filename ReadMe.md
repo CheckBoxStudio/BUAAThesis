@@ -1,6 +1,6 @@
 # 北京航空航天大学学位论文LaTeX模板
 
-**本模板仅为个人兴趣之作，非官方模板.**
+> **本模板仅为个人兴趣之作，非官方模板。**
 
 本项目为北京航空航天大学学位论文模板BUAAThesis，包含Word模板和LaTeX模板(基于[ctexbook](https://ctan.org/pkg/ctex))。模板按照2015年8月版《研究生手册》制定，适用于理工类博士、硕士、专业硕士学位论文（中文）。
 
@@ -22,7 +22,7 @@ BUAAThesis
  |- head-master.eps       // 论文封皮北学硕学位论文标题(华文行楷字体替代解决方案)
  |- head-professional.eps // 论文封皮北专硕学位论文标题(华文行楷字体替代解决方案)
  |- Template.tex          // LaTeX模板
- |- tex/*.tex             // LaTeX模板样例中的
+ |- tex/*.tex             // LaTeX模板样例中的独立章节
  |- ref.bib               // LaTeX模板中的参考文献Bib文件
  |- Template.docx         // Word模板
  |- .gitignore            // Git忽略规则
@@ -31,9 +31,9 @@ BUAAThesis
 
 ## 模板使用
 
-+ Word: 直接在其上进行修改编写，请记得预先备份
-+ LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex
-+ Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译
++ Word: 直接在其上进行修改编写，请记得预先备份；
++ LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex；
++ Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译。
 ## 建议及问题反馈
 
 + E-mail: [weiqm@buaa.edu.cn](weiqm@buaa.edu.cn)
