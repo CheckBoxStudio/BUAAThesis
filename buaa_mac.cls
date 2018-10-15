@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板(Mac版) - LaTeX 01-04-2018
+%% %% 北航研究生毕业论文模板(Mac版) - LaTeX 10-15-2018
 %% %% 论文样式参考自《研究生手册--二〇一五年八月》
 %% %% 基于ctexbook
 %% %%
@@ -9,6 +9,7 @@
 %% %% 参与修改:
 %% %%
 %% %% Versions:
+%% %%   v1.3  Wei Quanmao (10-15-2018)
 %% %%   v1.1  Wei Quanmao (07-31-2018)
 %% %%   v1.0a Wei Quanmao (01-04-2018)
 %% %%
@@ -17,11 +18,11 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2018/07/31 v1.1 BUAA thesis class for Mac]
-\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 1.0a (based on CTex) 01-04-2018, by Wei Quanmao}
+\ProvidesClass{buaa}[2018/10/15 v1.3 BUAA thesis class for Mac]
+\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 1.3 (based on CTex) 10-15-2018, by Wei Quanmao}
 
 \usepackage{graphicx}
-\def\BUAAThesisVer{v1.0a 01-04-2018}
+\def\BUAAThesisVer{v1.3 10-15-2018}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -51,7 +52,7 @@
 \RequirePackage{graphicx}     % 图片
 \RequirePackage{subfigure}    % 图片
 \RequirePackage{epstopdf}     % 图片
-\RequirePackage{array}        % 
+\RequirePackage{array}        %
 \RequirePackage{enumitem}     %
 \RequirePackage{booktabs}     % 表格上下粗线
 \RequirePackage{longtable}    % 长表格
@@ -90,10 +91,10 @@
 \DeclareOption{secret10}{\gdef\@permission{secret10}}         % 秘密10年
 \DeclareOption{secret*}{\gdef\@permission{secret*}}           % 秘密永久
 \DeclareOption{classified}{\gdef\@permission{classified5}}    % 机密 = 机密5年
-\DeclareOption{classified3}{\gdef\@permission{classified3}}   % 机密3年 
-\DeclareOption{classified5}{\gdef\@permission{classified5}}   % 机密5年 
-\DeclareOption{classified10}{\gdef\@permission{classified10}} % 机密10年 
-\DeclareOption{classified*}{\gdef\@permission{classified*}}   % 机密永久 
+\DeclareOption{classified3}{\gdef\@permission{classified3}}   % 机密3年
+\DeclareOption{classified5}{\gdef\@permission{classified5}}   % 机密5年
+\DeclareOption{classified10}{\gdef\@permission{classified10}} % 机密10年
+\DeclareOption{classified*}{\gdef\@permission{classified*}}   % 机密永久
 \DeclareOption{topsecret}{\gdef\@permission{topsecret10}}     % 绝密 = 绝密10年
 \DeclareOption{topsecret3}{\gdef\@permission{topsecret3}}     % 绝密3年
 \DeclareOption{topsecret5}{\gdef\@permission{topsecret5}}     % 绝密5年
@@ -104,7 +105,7 @@
 }}
 
 %% 打印设置
-\DeclareOption{oneside}{\gdef\@printtype{oneside}} % 单面打印 
+\DeclareOption{oneside}{\gdef\@printtype{oneside}} % 单面打印
 \DeclareOption{twoside}{\gdef\@printtype{twoside}} % 双面打印
 
 %% 适应首字母大写
@@ -339,7 +340,7 @@
 \renewenvironment{table}[1][h!]
 {\begin{spacing}{1.2} \org@table[#1] \songti\zihao{5}}
 {\org@endtable \end{spacing}}
-  
+
 \let\org@longtable\longtable
 \let\org@endlongtable\endlongtable
 \renewenvironment{longtable}[1][h!]
@@ -359,7 +360,7 @@
   aboveskip=0pt, belowskip=0pt, justification=centerlast}
 
 %出现在页面中间的浮动对象与上下方文本之间的垂直距离
-%缺省为 12pt plus 2pt minus 2pt。 
+%缺省为 12pt plus 2pt minus 2pt。
 %\setlength{\intextsep}{12pt \@plus2pt \@minus 2pt}
 
 %出现在页面的顶部或底部的浮动对象之间的垂直距离
@@ -383,7 +384,7 @@
   colorlinks=true,
   bookmarksnumbered=true,
   bookmarksopen=true,
-  pdffitwindow=true, 
+  pdffitwindow=true,
   pdfsubject={BUAA thesis},
   pdfcreator={LaTeXed~By~WeiQM}
 }
@@ -430,7 +431,7 @@
 \newcommand{\clearautopage}{%右侧起新页
   \clearpage
   \ifthenelse{\equal{\@printtype}{twoside}}{% 双面
-    \ifodd\c@page 
+    \ifodd\c@page
     \else
       \hbox{}
       \vspace*{\fill}
@@ -549,7 +550,7 @@
   \abstructkeyword
   \makecontextlist
   \denotioan
-  
+
   \renewcommand{\headrulewidth}{0.4pt}
   \fancyfoot[C]{\zihao{5} \thepage}
   \fancyhead[CE]{\zihao{-5} \leftmark}
@@ -567,7 +568,7 @@
 
   {\zihao{5} \heiti \noindent
     \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
-    \hfill \TranSecretLevel{\@permission}    
+    \hfill \TranSecretLevel{\@permission}
     \\
     \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}
   }
@@ -586,9 +587,9 @@
     \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{head-doctor}}{
     }}}
   \end{figure}
-  
+
   \centering
-  
+
   \vspace{20pt}
   \begin{spacing}{1.2}
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{}
@@ -623,7 +624,7 @@
 
   \begin{spacing}{1.2}
 
-    {\zihao{-2} \bfseries 
+    {\zihao{-2} \bfseries
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{}
       \@titleen
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{%
@@ -634,20 +635,20 @@
     \vspace{50pt}
 
     {\zihao{4}
-      A Dissertation Submitted for the Degree of 
+      A Dissertation Submitted for the Degree of
       \ifthenelse{\equal{\@thesis}{master} \OR \equal{\@thesis}{professional}}{Master}{}
       \ifthenelse{\equal{\@thesis}{doctor}}{Docrtor of Philosophy}{}
     }
-    
+
     \vspace{100pt}
     {\zihao{-3} \bfseries
       \begin{tabular}{ll}
         \ifthenelse{\isundefined{\@cotutorcn}}{%
-          \makebox[70pt][s]{Candidate}:  & \@authoren \\ 
+          \makebox[70pt][s]{Candidate}:  & \@authoren \\
           \vspace{-10pt}\\
           \makebox[70pt][s]{Supervisor}: & \TranDegree{\@tutordegree} \hspace{-8pt} \@tutoren \\
         }{%
-          \makebox[77pt][s]{Candidate}:  & \@authoren \\ 
+          \makebox[77pt][s]{Candidate}:  & \@authoren \\
           \vspace{-10pt}\\
           \makebox[77pt][s]{Supervisors}: & \TranDegree{\@tutordegree} \hspace{-8pt} \@tutoren \\
                                           & \TranDegree{\@cotutordegree} \hspace{-8pt} \@cotutoren\\
@@ -657,7 +658,7 @@
   \end{spacing}
 
   \vspace{150pt}
-  
+
   \begin{spacing}{2.2}
     {\zihao{-3}
       \TranDepartment{\@department} \\
@@ -672,7 +673,7 @@
 
   {\zihao{5} \heiti \noindent
     \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
-    \hfill \TranSecretLevel{\@permission}    
+    \hfill \TranSecretLevel{\@permission}
     \\
     \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}
   }
@@ -681,7 +682,7 @@
   \vspace{150pt}
 
   \begin{spacing}{1.2}
-    {\zihao{-2} \heiti 
+    {\zihao{-2} \heiti
         \ifthenelse{\equal{\@thesis}{master}}{%
          \makebox[16\ccwd][s]{硕士学位论文}}{
         \ifthenelse{\equal{\@thesis}{professional}}{%
@@ -689,11 +690,11 @@
         \ifthenelse{\equal{\@thesis}{doctor}}{%
           \makebox[16\ccwd][s]{博士学位论文}}{}
         }}
-         
+
     }
 
     \vspace{50pt}
-    {\zihao{-1} \heiti 
+    {\zihao{-1} \heiti
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{}
     \@titlecn
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{%
@@ -734,7 +735,7 @@
 
       若有不实之处，本人愿意承担相关法律责任。 \\
 
-      {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd} 
+      {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd}
       日期：\hspace{3\ccwd}年\hspace{2\ccwd}月\hspace{2\ccwd}日}
     }
 
@@ -749,11 +750,11 @@
     段保存学位论文。
 
         保密学位论文在解密后的使用授权同上。 \\
-   
-        {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd} 
+
+        {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd}
         日期：\hspace{3\ccwd}年\hspace{2\ccwd}月\hspace{2\ccwd}日}
 
-        {\zihao{5}\ \ 指导教师签名：\underline{\hspace{9\ccwd}}    \hspace{4\ccwd} 
+        {\zihao{5}\ \ 指导教师签名：\underline{\hspace{9\ccwd}}    \hspace{4\ccwd}
         日期：\hspace{3\ccwd}年\hspace{2\ccwd}月\hspace{2\ccwd}日}
     }
 
@@ -772,10 +773,10 @@
       \@abstrctcn \par ~\par
       {\heiti 关键字：} \@keywordcn
     }
-    
+
     \clearpage
     %\ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
-    
+
     {\zihao{3} \bfseries  \centerline{Abstract}}
     {\zihao{-4} ~\par
       \@abstrcten \par ~\par
@@ -788,7 +789,7 @@
 }}
 \newcommand{\makecontextlist}{% 目录
 {\pdfbookmark[0]{目录}{makecontextlist}
-  
+
   \tableofcontents
   \ifthenelse{\isundefined{\@listfigtab}}{}{%
     \ifthenelse{\equal{\@listfigtab}{on}}{%
@@ -804,7 +805,7 @@
 }}
 \newcommand{\denotioan}{% 缩写定义
 {\pdfbookmark[0]{主要符号表}{denotioan}
-  
+
   \chapter*{主要符号表}
   \ifthenelse{\isundefined{\@abbreviations}}{}{%
     %\centering

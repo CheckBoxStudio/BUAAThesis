@@ -34,6 +34,7 @@ BUAAThesis
 + Word: 直接在其上进行修改编写，请记得预先备份；
 + LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex；
 + Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译。
+
 ## 建议及问题反馈
 
 + E-mail: [weiqm@buaa.edu.cn](weiqm@buaa.edu.cn)
