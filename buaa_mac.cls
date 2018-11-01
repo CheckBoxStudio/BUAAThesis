@@ -262,9 +262,9 @@
 %% CTeX调整
 % 半角/缩进/行伸缩设置
 \ctexset{%
-  punct=banjiao, % 半角
+  punct=plain, % 无调整
   autoindent=2,  % 缩进
-  linestretch=1, % 行伸缩
+  linestretch=2, % 行伸缩
 }
 % 部分标题修改
 \ctexset{%
