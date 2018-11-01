@@ -262,7 +262,7 @@
 %% CTeX调整
 % 半角/缩进/行伸缩设置
 \ctexset{%
-  punct=quanjiao, % 无调整
+  punct=quanjiao, % 全角
   autoindent=2,  % 缩进
   linestretch=2, % 行伸缩
 }
