@@ -827,6 +827,8 @@
 }
 \newcommand{\Bib}[2]{%参考文献
   \bibliographystyle{#1}
+  \clearpage
+  \phantomsection
   \addcontentsline{toc}{chapter}{参考文献}
   \bibliography{#2}
 }
