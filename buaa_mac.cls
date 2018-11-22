@@ -7,8 +7,10 @@
 %% %% 初始版本作者:
 %% %%   Wei Quanmao (weiqm@buaa.edu.cn)
 %% %% 参与修改:
+%% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v2.0  WeiQM, QiaoJF (11-22-2018)
 %% %%   v1.3  Wei Quanmao (10-15-2018)
 %% %%   v1.1  Wei Quanmao (07-31-2018)
 %% %%   v1.0a Wei Quanmao (01-04-2018)
@@ -18,8 +20,8 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2018/10/15 v1.3 BUAA thesis class for Mac]
-\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 1.3 (based on CTex) 10-15-2018, by Wei Quanmao}
+\ProvidesClass{buaa}[2018/11/22 v2.0 BUAA thesis class for Mac]
+\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 2.0 (based on CTex) 11-22-2018}
 
 \usepackage{graphicx}
 \def\BUAAThesisVer{v1.3 10-15-2018}

@@ -37,9 +37,11 @@ BUAAThesis
 
 ## 关于图书馆查重
 
-+ 2018/11/22, Qiao Junfeng  
-  实际经验表明，使用此模板经XeLaTeX编译生成的pdf，图书馆查重时未遇到乱码问题。  
-  我的环境：Manjaro Linux + TeX Live 2018 + TeXstudio 2.12.10  
++ By [Qiao Junfeng](https://github.com/qiaojunfeng), 2018/11/22
+
+    实际经验表明，使用此模板经XeLaTeX编译生成的pdf，图书馆查重时未遇到乱码问题。
+
+    我的环境：Manjaro Linux + TeX Live 2018 + TeXstudio 2.12.10。
 
 ## 建议及问题反馈
 
@@ -59,4 +61,4 @@ BUAAThesis
 
 ***
 
-By [WeiQM](https://weiquanmao.github.io/) at D409.IPC.BUAA.
+By [WeiQM](https://weiquanmao.github.io/).
