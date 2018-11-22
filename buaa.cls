@@ -7,6 +7,7 @@
 %% %% 初始版本作者:
 %% %%   Wei Quanmao (weiqm@buaa.edu.cn)
 %% %% 参与修改:
+%% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
 %% %%   v1.3  Wei Quanmao (10-15-2018)

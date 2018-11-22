@@ -35,6 +35,12 @@ BUAAThesis
 + LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex；
 + Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译。
 
+## 关于图书馆查重
+
++ 2018/11/22, Qiao Junfeng  
+  实际经验表明，使用此模板经XeLaTeX编译生成的pdf，图书馆查重时未遇到乱码问题。  
+  我的环境：Manjaro Linux + TeX Live 2018 + TeXstudio 2.12.10  
+
 ## 建议及问题反馈
 
 + E-mail: [weiqm@buaa.edu.cn](weiqm@buaa.edu.cn)
