@@ -49,7 +49,6 @@
 \RequirePackage{geometry}     % 设置页边距
 \RequirePackage{fancyhdr}     % 设置页眉页脚
 \RequirePackage{setspace}     % 设置行间距
-\RequirePackage{times}        % Times New Roman字体
 \RequirePackage{float}        % 图片
 \RequirePackage{graphicx}     % 图片
 \RequirePackage{subfigure}    % 图片
@@ -64,6 +63,8 @@
 \RequirePackage{listings}     % 代码环境
 \RequirePackage{amsmath}      % 数学
 \RequirePackage{amsthm}       % 定理
+\RequirePackage{newtxtext}    % Times New Roman字体
+\RequirePackage{newtxmath}    % 公式的Times New Roman字体，需放置于amsthm之后
 \RequirePackage{titletoc}     % 目录
 \RequirePackage{remreset}     % 计数器设置
 \RequirePackage{hyperref}     % 超链接
