@@ -678,26 +678,27 @@
   \centering
   \vspace{150pt}
 
-  {\zihao{-2} \heiti
-      \ifthenelse{\equal{\@thesis}{master}}{%
-       \makebox[16\ccwd][s]{硕士学位论文}}{
-      \ifthenelse{\equal{\@thesis}{professional}}{%
-       \makebox[16\ccwd][s]{硕士学位论文}}{
-      \ifthenelse{\equal{\@thesis}{doctor}}{%
-        \makebox[16\ccwd][s]{博士学位论文}}{}
-      }}
-   }
+  \begin{spacing}{1.2}
+    {\zihao{-2} \heiti
+        \ifthenelse{\equal{\@thesis}{master}}{%
+         \makebox[16\ccwd][s]{硕士学位论文}}{
+        \ifthenelse{\equal{\@thesis}{professional}}{%
+         \makebox[16\ccwd][s]{硕士学位论文}}{
+        \ifthenelse{\equal{\@thesis}{doctor}}{%
+          \makebox[16\ccwd][s]{博士学位论文}}{}
+        }}
+
+    }
 
     \vspace{50pt}
-   {\begin{spacing}{1.2}
-    \zihao{-1} \heiti
+    {\zihao{-1} \heiti
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{}
     \@titlecn
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{%
       \\ \vspace{10pt}
       \zihao{2} \@subtitlecn}
-    \end{spacing}
    }
+  \end{spacing}
 
   \vspace{120pt}
   \begin{spacing}{2.3}
