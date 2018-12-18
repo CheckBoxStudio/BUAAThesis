@@ -24,7 +24,7 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
  \verb|tex/*.tex|             & $\triangleright$ 本模板样例中的独立章节\\
 \end{tabular}\\
 
-通过 \verb|\documentclass[<thesis>,<permission>,<printtype>]{buaa}|载入宏包：
+通过 \verb|\documentclass[<thesis>,<permission>,<printtype>,<ctexbookoptions>]{buaa}|载入宏包：
 \begin{itemize}[leftmargin=3cm]
   \item[{\tt thesis} $\triangleright$]  论文类型(thesis)，可选值：\\
     a) 学术硕士论文（\verb|master|）[缺省值]\\
@@ -50,7 +50,12 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
     --- e.4) 绝密永久（\verb|topsecret*|）
   \item[{\tt printtype} $\triangleright$] 打印属性(printtype)，可选值： \\
     a) 单面打印（\verb|onside|）[缺省值]\\
-    b) 双面打印（\verb|twoside|）
+    b) 双面打印（\verb|twoside|）\\
+  \item[{\tt ctexbookoptions} $\triangleright$] 其他选项将被传递给{\tt ctexbook}文档类。\\
+  一种使用场景为：
+  CTeX在Linux下默认使用Fandol字体，受字体所限，某些生僻字（如姓名）无法显示。
+  一种解决办法为自行在系统中安装CTeX所需的字体，如方正字体。
+  使用{\tt ctexbookoptions}机制，将{\tt fontset=founder}加入到{\tt buaa}文档类的选项中可避免生僻字乱码的问题。
 \end{itemize}
 
 模板已内嵌LaTeX工具包： 
