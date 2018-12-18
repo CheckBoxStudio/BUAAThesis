@@ -621,12 +621,14 @@
 
   \begin{spacing}{1.2}
 
-    {\zihao{-2} \bfseries
+    {\begin{spacing}{1.2}
+      \zihao{-2} \bfseries
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{}
       \@titleen
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{%
         \\ \vspace{10pt}
         \zihao{3} \@subtitleen}
+    \end{spacing}
     }
 
     \vspace{50pt}
@@ -691,13 +693,15 @@
     }
 
     \vspace{50pt}
-    {\zihao{-1} \heiti
+    {\begin{spacing}{1.2}
+    \zihao{-1} \heiti
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{}
     \@titlecn
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{%
       \\ \vspace{10pt}
       \zihao{2} \@subtitlecn}
-   }
+    \end{spacing}
+    }
   \end{spacing}
 
   \vspace{120pt}
