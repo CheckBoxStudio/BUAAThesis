@@ -24,57 +24,6 @@
 \ProvidesClass{buaa}[2018/11/22 v2.0 BUAA thesis class]
 \typeout{This is LaTeX template buaa, Version 2.0 (based on CTex) 11-22-2018}
 
-\usepackage{graphicx}
-\def\BUAAThesisVer{v2.0 11-22-2018}
-\def\BUAAThesis{%
- B%
- {\fontsize{0.8em}{\baselineskip}\selectfont
- \kern-.12em\lower.5ex\hbox{U}%
- \kern-.46em\raise.47ex\hbox{A}%
- \kern-.12em A%
-}
- \kern-.35emT%
- \kern-.22em\lower.5ex\hbox{H}%
- \kern-.08em E%
- \kern-.05em\lower.5ex\hbox{S}%
- \kern-.26em I%
- \kern-.26em\raise.5ex\hbox{\rotatebox[origin=c]{180}{S}}%
-}
-
-% 引用ctexbook: 小4,1.5倍行距
-\LoadClass[UTF8,zihao=-4,linespread=1.7]{ctexbook}%1.5+0.2行间距
-
-%% 预声明
-\RequirePackage{ifthen}       % ifthenelse/equal/isundefined等判断比较命令
-\RequirePackage{geometry}     % 设置页边距
-\RequirePackage{fancyhdr}     % 设置页眉页脚
-\RequirePackage{setspace}     % 设置行间距
-\RequirePackage{times}        % Times New Roman字体
-\RequirePackage{float}        % 图片
-\RequirePackage{graphicx}     % 图片
-\RequirePackage{subfigure}    % 图片
-\RequirePackage{epstopdf}     % 图片
-\RequirePackage{array}        %
-\RequirePackage{enumitem}     %
-\RequirePackage{booktabs}     % 表格上下粗线
-\RequirePackage{longtable}    % 长表格
-\RequirePackage{multirow}     % 多行表格
-\RequirePackage{caption}      % 标题设置
-\RequirePackage{algorithm2e}  % 算法环境
-\RequirePackage{listings}     % 代码环境
-\RequirePackage{amsmath}      % 数学
-\RequirePackage{amsthm}       % 定理
-\RequirePackage{titletoc}     % 目录
-\RequirePackage{remreset}     % 计数器设置
-\RequirePackage{hyperref}     % 超链接
-\RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
-\RequirePackage{pifont}       % 画五角星
-\RequirePackage{color}        % To provide color for soul
-\RequirePackage{soul}         % To highlight text
-\RequirePackage[sort&compress]{natbib}              % BibTex
-\DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
-\newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
-
 %% 选项
 %% 论文类型
 \DeclareOption{master}{\gdef\@thesis{master}}             % 学术硕士论文
@@ -141,6 +90,57 @@
 \ExecuteOptions{master,pubilc,oneside,a4paper,sub4section}
 \setcounter{secnumdepth}{5}
 \ProcessOptions\relax
+
+% 引用ctexbook: 小4,1.5倍行距
+\LoadClass[UTF8,zihao=-4,linespread=1.7]{ctexbook}%1.5+0.2行间距
+
+\usepackage{graphicx}
+\def\BUAAThesisVer{v2.0 11-22-2018}
+\def\BUAAThesis{%
+ B%
+ {\fontsize{0.8em}{\baselineskip}\selectfont
+ \kern-.12em\lower.5ex\hbox{U}%
+ \kern-.46em\raise.47ex\hbox{A}%
+ \kern-.12em A%
+}
+ \kern-.35emT%
+ \kern-.22em\lower.5ex\hbox{H}%
+ \kern-.08em E%
+ \kern-.05em\lower.5ex\hbox{S}%
+ \kern-.26em I%
+ \kern-.26em\raise.5ex\hbox{\rotatebox[origin=c]{180}{S}}%
+}
+
+%% 预声明
+\RequirePackage{ifthen}       % ifthenelse/equal/isundefined等判断比较命令
+\RequirePackage{geometry}     % 设置页边距
+\RequirePackage{fancyhdr}     % 设置页眉页脚
+\RequirePackage{setspace}     % 设置行间距
+\RequirePackage{times}        % Times New Roman字体
+\RequirePackage{float}        % 图片
+\RequirePackage{graphicx}     % 图片
+\RequirePackage{subfigure}    % 图片
+\RequirePackage{epstopdf}     % 图片
+\RequirePackage{array}        %
+\RequirePackage{enumitem}     %
+\RequirePackage{booktabs}     % 表格上下粗线
+\RequirePackage{longtable}    % 长表格
+\RequirePackage{multirow}     % 多行表格
+\RequirePackage{caption}      % 标题设置
+\RequirePackage{algorithm2e}  % 算法环境
+\RequirePackage{listings}     % 代码环境
+\RequirePackage{amsmath}      % 数学
+\RequirePackage{amsthm}       % 定理
+\RequirePackage{titletoc}     % 目录
+\RequirePackage{remreset}     % 计数器设置
+\RequirePackage{hyperref}     % 超链接
+\RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
+\RequirePackage{pifont}       % 画五角星
+\RequirePackage{color}        % To provide color for soul
+\RequirePackage{soul}         % To highlight text
+\RequirePackage[sort&compress]{natbib}              % BibTex
+\DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
+\newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 数学环境
