@@ -1,3 +1,4 @@
+% !TeX root = ../Template.tex
 % 本LaTeX模板的一般使用说明
 \chapter{说明}
 
@@ -50,19 +51,17 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
     --- e.4) 绝密永久（\verb|topsecret*|）
   \item[{\tt printtype} $\triangleright$] 打印属性(printtype)，可选值： \\
     a) 单面打印（\verb|onside|）[缺省值]\\
-    b) 双面打印（\verb|twoside|）\\
-  \item[{\tt ctexbookoptions} $\triangleright$] 其他选项将被传递给{\tt ctexbook}文档类。\\
-  一种使用场景为：
-  CTeX在Linux下默认使用Fandol字体，受字体所限，某些生僻字（如姓名）无法显示。
-  一种解决办法为自行在系统中安装CTeX所需的字体，如方正字体。
-  使用{\tt ctexbookoptions}机制，将{\tt fontset=founder}加入到{\tt buaa}文档类的选项中可避免生僻字乱码的问题。
+    b) 双面打印（\verb|twoside|）
+  \item[{\tt ctexbookoptions} $\triangleright$] {\tt ctexbook}文档类支持的其他选项： \\
+    使用{\tt ctexbookoptions}选项传递{\tt ctexbook}文档类支持的其他选项。
+    例如，使用{\tt fontset=founder}选项启用方正字体以避免生僻字乱码的问题\footnote{需要系统安装方正字体。}。
 \end{itemize}
 
-模板已内嵌LaTeX工具包： 
- {\tt ifthen}，{\tt etoolbox}，{\tt titletoc}，{\tt remreset}，{\tt remreset}, 
- {\tt geometry}，{\tt fancyhdr}，{\tt setspace}，{\tt caption}，{\tt float}， 
+模板已内嵌LaTeX工具包：
+ {\tt ifthen}，{\tt etoolbox}，{\tt titletoc}，{\tt remreset}，{\tt remreset},
+ {\tt geometry}，{\tt fancyhdr}，{\tt setspace}，{\tt caption}，{\tt float}，
  {\tt graphicx}，{\tt subfigure}，{\tt epstopdf}，
- {\tt book\-tabs}，{\tt longtable}，{\tt multirow}，{\tt array}, {\tt enumitem}， 
+ {\tt book\-tabs}，{\tt longtable}，{\tt multirow}，{\tt array}, {\tt enumitem}，
  {\tt algorithm2e}，{\tt amsmath}，{\tt amsthm}，{\tt listings}，
  {\tt pifont}，{\tt color}，{\tt soul}, {\tt newtxtext}, {\tt newtxmath}。
 
@@ -113,9 +112,8 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
 \section{注意事项}
 \begin{itemize}
   \item[$\triangleright$] \textit{中文斜体}将转换为楷体；
-  \item[$\triangleright$] \textbf{中文粗体}正常；
-  \item[$\triangleright$] 英文粗体\textbf{English}、斜体\textit{English}均正常；
-  \item[$\triangleright$] 中文标点的断行效果不好；
+  \item[$\triangleright$] \verb|buaa.cls|采用包{\tt newtxtext}和{\tt newtxmath}，\textbf{中文粗体}在Windows下转换为黑体（有可能是因为newtx包没安装好，By WeiQM），Linux下正常（By QiaoJF）；
+  \item[$\triangleright$] \verb|buaa_mac.cls|采用包{\tt times}，\textbf{中文粗体}转换为黑体（By CaiBW）；
   \item[$\triangleright$] \verb|\label{<text>}|中不能使用中文；
   \item[$\triangleright$] 浮动体与正文之间的距离是弹性的；
   \item[$\triangleright$] 命令符与汉字之间请注意加空格以避免undefined错误（pdfLaTeX下好像一般不存在这个问题，主要在XeLaTeX编译环境下发生）；
