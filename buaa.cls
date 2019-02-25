@@ -293,7 +293,7 @@
     afterskip=3.61pt,
   },
   subsubsection={% 附加4级标题 : 小四号宋体加粗居左
-    format=\zihao{-4} \songti \raggedright \bfseries,
+    format=\zihao{-4} \songti \raggedright,
   },
   paragraph={% 附加5级标题 : 小四号宋体居左
     format=\zihao{-4} \songti \raggedright,
@@ -334,7 +334,6 @@
 \titlecontents{table}[0pt]{\songti\zihao{-4}}{表~\thecontentslabel\quad}{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
-
 % 图表环境设置
 \let\org@table\table
 \let\org@endtable\endtable
@@ -371,6 +370,14 @@
 %出现在页面的顶部或底部的浮动对象与文本之间的垂直距离
 % 缺省为 20pt plus 2pt minus 4pt。
 %\setlength{\textfloatsep}{20bp \@plus2pt \@minus4pt}
+
+% 列表间接设置
+\setlist{
+  topsep=0pt, % 列表环境与上文距离
+  itemsep=0pt, % 条目间距离
+  parsep=\parskip, % 条目内段落距离
+  partopsep=0pt % 列表环境与下文距离
+}
 
 % 设置参考文献格式
 \newcommand\bibstyle@super{\bibpunct{[}{]}{,}{s}{,}{\textsuperscript{,}}}
@@ -793,10 +800,10 @@
 }}
 \newcommand{\makecontextlist}{% 目录
 {\pdfbookmark[0]{目录}{makecontextlist}
-
   \tableofcontents
   \ifthenelse{\isundefined{\@listfigtab}}{}{%
     \ifthenelse{\equal{\@listfigtab}{on}}{%
+      \renewcommand{\addvspace}[1]{}
       \clearpage
       \pdfbookmark[0]{图目录}{listoffigures}
       \listoffigures
