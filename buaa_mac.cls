@@ -21,7 +21,7 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2018/12/19 v2.1 BUAA thesis class for Mac]
+\ProvidesClass{buaa_mac}[2018/12/19 v2.1 BUAA thesis class for Mac]
 \typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX), Version 2.1 (based on CTex) 12-19-2018}
 
 %% 选项
