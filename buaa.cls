@@ -23,7 +23,7 @@
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{buaa}[2018/12/19 v2.1 BUAA thesis class]
-\typeout{This is LaTeX template buaa, Version 2.1 (based on CTex) 12-19-2018}
+\typeout{This is LaTeX template buaa. Version 2.1 (based on CTeX) 12-19-2018}
 
 %% 选项
 %% 论文类型
