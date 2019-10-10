@@ -351,6 +351,8 @@
 \@removefromreset{figure}{chapter}
 \renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\p@subfigure}{\thefigure}
+
 \DeclareCaptionFormat{tabfigformat}{\bf\songti\zihao{5}{#1~~#3}}
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
