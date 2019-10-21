@@ -804,6 +804,7 @@
 \newcommand{\makecontextlist}{% 目录
 {\pdfbookmark[0]{目录}{makecontextlist}
   \tableofcontents
+  \renewcommand\addvspace[1]{}
   \ifthenelse{\isundefined{\@listfigtab}}{}{%
     \ifthenelse{\equal{\@listfigtab}{on}}{%
       \renewcommand{\addvspace}[1]{}
