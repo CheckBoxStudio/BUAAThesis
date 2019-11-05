@@ -834,10 +834,38 @@
 \newcommand{\chaptera}[1]{%无章号但编入目录
   \ctexset{chapter/numbering=false}
   \chapter{#1}
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  %
+  \gdef\thesection{\@Alph\c@section}%
+  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  %
+
+  \renewcommand{\thefigure}{A\arabic{figure}}
+  \setcounter{figure}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{table}{0}
+  \renewcommand{\theequation}{A\arabic{equation}}
+  \setcounter{equation}{0}
 }
 \newcommand{\summary}{%结论
   \ctexset{chapter/numbering=false}
   \chapter{结~~~~论}
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  %
+  \gdef\thesection{\@Alph\c@section}%
+  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  %
+
+  \renewcommand{\thefigure}{A\arabic{figure}}
+  \setcounter{figure}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{table}{0}
+  \renewcommand{\theequation}{A\arabic{equation}}
+  \setcounter{equation}{0}
 }
 \newcommand{\Bib}[2]{%参考文献
   \bibliographystyle{#1}
@@ -870,14 +898,59 @@
   \ifthenelse{\equal{\@thesis}{professional}}{\chapter{攻读硕士学位期间取得的学术成果}}{
   \ifthenelse{\equal{\@thesis}{doctor}}{\chapter{攻读博士学位期间取得的研究成果}}{
   }}}
+
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  %
+  \gdef\thesection{\@Alph\c@section}%
+  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  %
+
+  \renewcommand{\thefigure}{A\arabic{figure}}
+  \setcounter{figure}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{table}{0}
+  \renewcommand{\theequation}{A\arabic{equation}}
+  \setcounter{equation}{0}
 }
 \newcommand{\acknowledgments}{%致谢
   \ctexset{chapter/numbering=false}
   \chapter{致~~~~谢}
+
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  %
+  \gdef\thesection{\@Alph\c@section}%
+  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  %
+
+  \renewcommand{\thefigure}{A\arabic{figure}}
+  \setcounter{figure}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{table}{0}
+  \renewcommand{\theequation}{A\arabic{equation}}
+  \setcounter{equation}{0}
 }
 \newcommand{\biography}{%作者简介
   \ctexset{chapter/numbering=false}
   \chapter{作者简介}
+
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  %
+  \gdef\thesection{\@Alph\c@section}%
+  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  %
+
+  \renewcommand{\thefigure}{A\arabic{figure}}
+  \setcounter{figure}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{table}{0}
+  \renewcommand{\theequation}{A\arabic{equation}}
+  \setcounter{equation}{0}
 }
 
 %% --END--
