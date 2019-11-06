@@ -819,16 +819,15 @@
   \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
 }}
 \newcommand{\denotioan}{% 缩写定义
-{\pdfbookmark[0]{主要符号表}{denotioan}
-
-  \chapter*{主要符号表}
-  \ifthenelse{\isundefined{\@abbreviations}}{}{%
+{\ifthenelse{\isundefined{\@abbreviations}}{}{%
+    \pdfbookmark[0]{主要符号表}{denotioan}
+    \chapter*{主要符号表}
     %\centering
     %\begin{tabular}{cl}
       \@abbreviations
     %\end{tabular}%
+    \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
   }
-  \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
 }}
 
 
