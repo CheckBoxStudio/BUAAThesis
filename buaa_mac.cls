@@ -563,7 +563,7 @@
   \setcounter{page}{1}
   \abstructkeyword
   \makecontextlist
-  \denotioan
+  \denotation
 
   \renewcommand{\headrulewidth}{0.4pt}
   \fancyfoot[C]{\zihao{5} \thepage}
@@ -818,9 +818,9 @@
   }
   \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
 }}
-\newcommand{\denotioan}{% 缩写定义
+\newcommand{\denotation}{% 缩写定义
 {\ifthenelse{\isundefined{\@abbreviations}}{}{%
-    \pdfbookmark[0]{主要符号表}{denotioan}
+    \pdfbookmark[0]{主要符号表}{denotation}
     \chapter*{主要符号表}
     %\centering
     %\begin{tabular}{cl}
