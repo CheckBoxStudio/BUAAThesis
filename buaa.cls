@@ -88,7 +88,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 
 %% 默认选项配置
-\ExecuteOptions{master,pubilc,oneside,a4paper,sub4section}
+\ExecuteOptions{master,public,oneside,a4paper,sub4section}
 \ProcessOptions\relax
 
 % 引用ctexbook: 小4,1.5倍行距
