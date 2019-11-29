@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板(Mac版) - LaTeX 12-19-2018
+%% %% 北航研究生毕业论文模板(Mac版) - LaTeX 11-30-2019
 %% %% 论文样式参考自《研究生手册--二〇一五年八月》
 %% %% 基于ctexbook
 %% %%
@@ -10,6 +10,7 @@
 %% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v2.2  WeiQM (11-30-2019)
 %% %%   v2.1  QiaoJF, WeiQM (12-19-2018)
 %% %%   v2.0  WeiQM, QiaoJF (11-22-2018)
 %% %%   v1.3  Wei Quanmao (10-15-2018)
@@ -21,8 +22,8 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa_mac}[2018/12/19 v2.1 BUAA thesis class for Mac]
-\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX). Version 2.1 (based on CTeX) 12-19-2018}
+\ProvidesClass{buaa_mac}[2019/11/30 v2.2 BUAA thesis class for Mac]
+\typeout{This is LaTeX template buaa-mac (for mac with XeLaTeX). Version 2.2 (based on CTeX) 11-30-2019}
 
 %% 选项
 %% 论文类型
@@ -95,7 +96,7 @@
 \setcounter{secnumdepth}{5}
 
 \usepackage{graphicx}
-\def\BUAAThesisVer{v2.1 12-19-2018}
+\def\BUAAThesisVer{v2.2 11-30-2019}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -281,10 +282,10 @@
 \ctexset{%
   chapter={%章标题 : 三号黑体居中 单倍行距 段前/段后0.5行 另起新页
     format=\zihao{3} \heiti \centering \thispagestyle{fancy},
-    %fixskip=true,% Not Support by XeLaTeX
+    fixskip=true,
     beforeskip=19.27pt,
     afterskip=22.48pt,
-    %break=\clearpage,% Not Support by XeLaTeX
+    break=\clearpage,
   },
   section={%节标题 : 四号黑体居左 单倍行距 段前/段后0.5行
     format=\zihao{4} \heiti \raggedright,
@@ -441,7 +442,7 @@
     \errmessage{Please use 'on' of 'off' for listfigtab.}}
   }
 }
-\renewcommand\cleardoublepage{\clearpage}
+
 \newcommand{\clearautopage}{%右侧起新页
   \clearpage
   \ifthenelse{\equal{\@printtype}{twoside}}{% 双面
@@ -638,12 +639,14 @@
 
   \begin{spacing}{1.2}
 
-    {\zihao{-2} \bfseries
+    {\begin{spacing}{1.2}
+      \zihao{-2} \bfseries
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{}
       \@titleen
       \ifthenelse{\isundefined{\@subtitleen}}{\vspace{20pt}}{%
         \\ \vspace{10pt}
         \zihao{3} \@subtitleen}
+    \end{spacing}
     }
 
     \vspace{50pt}
@@ -708,13 +711,15 @@
     }
 
     \vspace{50pt}
-    {\zihao{-1} \heiti
+    {\begin{spacing}{1.2}
+    \zihao{-1} \heiti
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{}
     \@titlecn
     \ifthenelse{\isundefined{\@subtitlecn}}{\vspace{20pt}}{%
       \\ \vspace{10pt}
       \zihao{2} \@subtitlecn}
-   }
+    \end{spacing}
+    }
   \end{spacing}
 
   \vspace{120pt}

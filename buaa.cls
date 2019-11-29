@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板 - LaTeX 12-19-2018
+%% %% 北航研究生毕业论文模板 - LaTeX 11-30-2019
 %% %% 论文样式参考自《研究生手册--二〇一五年八月》
 %% %% 基于ctexbook
 %% %%
@@ -10,6 +10,7 @@
 %% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v2.2  WeiQM (11-30-2019)
 %% %%   v2.1  QiaoJF, WeiQM (12-19-2018)
 %% %%   v2.0  WeiQM, QiaoJF (11-22-2018)
 %% %%   v1.3  Wei Quanmao (10-15-2018)
@@ -22,8 +23,8 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2018/12/19 v2.1 BUAA thesis class]
-\typeout{This is LaTeX template buaa. Version 2.1 (based on CTeX) 12-19-2018}
+\ProvidesClass{buaa}[2019/11/30 v2.2 BUAA thesis class]
+\typeout{This is LaTeX template buaa. Version 2.2 (based on CTeX) 11-30-2019}
 
 %% 选项
 %% 论文类型
@@ -96,7 +97,7 @@
 \setcounter{secnumdepth}{5}
 
 \usepackage{graphicx}
-\def\BUAAThesisVer{v2.1 12-19-2018}
+\def\BUAAThesisVer{v2.2 11-30-2019}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
