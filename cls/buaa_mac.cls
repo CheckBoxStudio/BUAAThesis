@@ -592,14 +592,14 @@
 
   \begin{figure}[h]
     \centering
-    \includegraphics{logo-buaa}
+    \includegraphics{pic/logo-buaa}
   \end{figure}
   \vspace{-10pt}
   \begin{figure}[h]
     \centering
-    \ifthenelse{\equal{\@thesis}{master}}{\includegraphics[width=0.9\linewidth]{head-master}}{
-    \ifthenelse{\equal{\@thesis}{professional}}{\includegraphics[width=0.9\linewidth]{head-professional}}{
-    \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{head-doctor}}{
+    \ifthenelse{\equal{\@thesis}{master}}{\includegraphics[width=0.9\linewidth]{pic/head-master}}{
+    \ifthenelse{\equal{\@thesis}{professional}}{\includegraphics[width=0.9\linewidth]{pic/head-professional}}{
+    \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{pic/head-doctor}}{
     }}}
   \end{figure}
 
