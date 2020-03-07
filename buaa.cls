@@ -83,7 +83,7 @@
 \DeclareOption{Secret3}{\gdef\@permission{secret3}}
 \DeclareOption{Secret5}{\gdef\@permission{secret5}}
 \DeclareOption{Secret10}{\gdef\@permission{secret10}}
-\DeclareOption{Secret}*{\gdef\@permission{secret*}}
+\DeclareOption{Secret*}{\gdef\@permission{secret*}}
 \DeclareOption{Classified}{\gdef\@permission{classified5}}
 \DeclareOption{Classified3}{\gdef\@permission{classified3}}
 \DeclareOption{Classified5}{\gdef\@permission{classified5}}
