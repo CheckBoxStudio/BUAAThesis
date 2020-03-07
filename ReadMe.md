@@ -13,27 +13,25 @@
 
 ```
 BUAAThesis
- |- buaa.cls              // LaTeX宏模板文件
- |- buaa_mac.cls          // LaTeX宏模板文件(For Mac with XeLaTeX)
- |- GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
- |- GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
- |- logo-buaa.eps         // 论文封皮北航字样
- |- head-doctor.eps       // 论文封皮北博士学位论文标题(华文行楷字体替代解决方案)
- |- head-master.eps       // 论文封皮北学硕学位论文标题(华文行楷字体替代解决方案)
- |- head-professional.eps // 论文封皮北专硕学位论文标题(华文行楷字体替代解决方案)
- |- Template.tex          // LaTeX模板
- |- tex/*.tex             // LaTeX模板样例中的独立章节
- |- ref.bib               // LaTeX模板中的参考文献Bib文件
- |- Template.docx         // Word模板
- |- .gitignore            // Git忽略规则
- +- ReadMe.md             // 本文件
+ |- buaa.cls                  // LaTeX宏模板文件
+ |- Template.tex              // LaTeX模板
+ |- Template.docx             // Word模板
+ |- ref.bib                   // LaTeX模板中的参考文献Bib文件
+ |- bst/GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
+ |- bst/GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
+ |- pic/logo-buaa.eps         // 论文封皮北航字样
+ |- pic/head-doctor.eps       // 论文封皮北博士学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-master.eps       // 论文封皮北学硕学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-professional.eps // 论文封皮北专硕学位论文标题(华文行楷字体替代解决方案)
+ |- tex/*.tex                 // LaTeX模板样例中的独立章节
+ |- ReadMe.md                 // 本文件
+ |- .gitignore                // Git忽略规则
 ```
 
 ## 模板使用
 
 + Word: 直接在其上进行修改编写，请记得预先备份；
-+ LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex；
-+ Mac: Mac系统请使用buaa_mac.cls并使用XeLaTeX编译。
++ LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex。
 
 ## 关于图书馆查重
 
@@ -42,6 +40,8 @@ BUAAThesis
     实际经验表明，使用此模板经XeLaTeX编译生成的pdf，图书馆查重时未遇到乱码问题。
 
     我的环境：Manjaro Linux + TeX Live 2018 + TeXstudio 2.12.10。
+
++ **已修复Windows系统下从pdf拷贝的西文乱码问题**。
 
 ## 建议及问题反馈
 

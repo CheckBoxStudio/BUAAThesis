@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板 - LaTeX 11-30-2019
+%% %% 北航研究生毕业论文模板 - LaTeX 03-07-2020
 %% %% 论文样式参考自《研究生手册--二〇一五年八月》
 %% %% 基于ctexbook
 %% %%
@@ -10,6 +10,7 @@
 %% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v3.0  WeiQM (03-07-2020)
 %% %%   v2.2  WeiQM (11-30-2019)
 %% %%   v2.1  QiaoJF, WeiQM (12-19-2018)
 %% %%   v2.0  WeiQM, QiaoJF (11-22-2018)
@@ -23,8 +24,8 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2019/11/30 v2.2 BUAA thesis class]
-\typeout{This is LaTeX template buaa. Version 2.2 (based on CTeX) 11-30-2019}
+\ProvidesClass{buaa}[2020/03/07 v3.0 BUAA thesis class]
+\typeout{This is LaTeX template buaa. Version 3.0 (based on CTeX) 03-07-2020}
 
 %% 选项
 %% 论文类型
@@ -60,6 +61,17 @@
 %% 打印设置
 \DeclareOption{oneside}{\gdef\@printtype{oneside}} % 单面打印
 \DeclareOption{twoside}{\gdef\@printtype{twoside}} % 双面打印
+\DeclareOption{printtype}{\ClassWarning{buaa}{%
+  You have not specified the PRINTTYPE option. The word printtype should be replaced by one of the following thesis type: oneside, twoside.
+}}
+
+%% 系统设置
+\DeclareOption{win}{\gdef\@ostype{win}}     % windows
+\DeclareOption{linux}{\gdef\@ostype{linux}} % linux
+\DeclareOption{max}{\gdef\@ostype{mac}}     % mac
+\DeclareOption{ostype}{\ClassWarning{buaa}{%
+  You have not specified the OSTYPE option. The word ostype should be replaced by one of the following thesis type: win, linux, mac.
+}}
 
 %% 适应首字母大写
 \DeclareOption{Master}{\gdef\@thesis{master}}
@@ -84,20 +96,24 @@
 \DeclareOption{TopSecret*}{\gdef\@permission{topsecret*}}
 \DeclareOption{Oneside}{\gdef\@printtype{oneside}}
 \DeclareOption{Twoside}{\gdef\@printtype{twoside}}
+\DeclareOption{Win}{\gdef\@ostype{win}}
+\DeclareOption{Linux}{\gdef\@ostype{linux}}
+\DeclareOption{Max}{\gdef\@ostype{mac}}
 
 %% 选项传递给ctexbook
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 
 %% 默认选项配置
-\ExecuteOptions{master,public,oneside,a4paper,sub4section}
+\ExecuteOptions{master,public,oneside,win,a4paper,sub4section}
 \ProcessOptions\relax
 
-% 引用ctexbook: 小4,1.5倍行距
+%% 引用ctexbook: 小4,1.5倍行距
 \LoadClass[UTF8,zihao=-4,linespread=1.7]{ctexbook}%1.5+0.2行间距
 \setcounter{secnumdepth}{5}
 
+%% BUAAThesis字样及版本信息
 \usepackage{graphicx}
-\def\BUAAThesisVer{v2.2 11-30-2019}
+\def\BUAAThesisVer{v3.0 03-07-2020}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -115,36 +131,46 @@
 
 %% 预声明
 \RequirePackage{ifthen}       % ifthenelse/equal/isundefined等判断比较命令
+\RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
+\RequirePackage{titletoc}     % 目录
+\RequirePackage{remreset}     % 计数器设置
 \RequirePackage{geometry}     % 设置页边距
 \RequirePackage{fancyhdr}     % 设置页眉页脚
 \RequirePackage{setspace}     % 设置行间距
-%\RequirePackage{times}        % Times New Roman字体
 \RequirePackage{float}        % 图片
 \RequirePackage{graphicx}     % 图片
 \RequirePackage{subfigure}    % 图片
 \RequirePackage{epstopdf}     % 图片
-\RequirePackage{array}        %
-\RequirePackage{enumitem}     %
+\RequirePackage{array}        % 列举
+\RequirePackage{enumitem}     % 列举
 \RequirePackage{booktabs}     % 表格上下粗线
 \RequirePackage{longtable}    % 长表格
 \RequirePackage{multirow}     % 多行表格
 \RequirePackage{caption}      % 标题设置
-\RequirePackage{algorithm2e}  % 算法环境
 \RequirePackage{listings}     % 代码环境
+\RequirePackage{algorithm2e}  % 算法环境
 \RequirePackage{amsmath}      % 数学
 \RequirePackage{amsthm}       % 定理
-\RequirePackage{newtxtext}    % Times New Roman字体
-\RequirePackage{newtxmath}    % 公式的Times New Roman字体，需放置于amsthm之后
-\RequirePackage{titletoc}     % 目录
-\RequirePackage{remreset}     % 计数器设置
 \RequirePackage{hyperref}     % 超链接
-\RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
 \RequirePackage{pifont}       % 画五角星
 \RequirePackage{color}        % To provide color for soul
 \RequirePackage{soul}         % To highlight text
 \RequirePackage[sort&compress]{natbib}              % BibTex
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
+
+% 根据不同系统调整
+\ifthenelse{\equal{\@ostype}{win}}{ % win 配置
+  \RequirePackage{times}        % Times New Roman字体
+}{}
+\ifthenelse{\equal{\@ostype}{linux}}{ % linux 配置
+  \RequirePackage{newtxtext}    % Times New Roman字体
+  \RequirePackage{newtxmath}    % 公式的Times New Roman字体 (!After package amsthm!)
+}{}
+\ifthenelse{\equal{\@ostype}{mac}}{ % mac 配置
+  \RequirePackage{times}        % Times New Roman字体
+  \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 数学环境
@@ -154,8 +180,9 @@
 \newcommand*{\diff}{\mathop{}\!\mathrm{d}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
+
 % 数学定理：
-% 以下定义数学定理环境默认风格为 buaa。
+% 以下定义数学定理环境默认风格为 buaa
 \newtheoremstyle{buaa}%
 {0pt}% measure of space to leave above the theorem.
 {0pt}% measure of space to leave below the theorem.
@@ -165,8 +192,8 @@
 {.}% punctuation between head and body.
 {\ccwd}% space after theorem head; " " = normal interword space
 {}% manually specify head (can be left empty, meaning `normal').
-
 \theoremstyle{buaa}
+
 % 定义新的定理
 \newcommand{\theoremname}{定理}
 \newcommand{\assertionname}{断言}
@@ -190,6 +217,7 @@
 \newtheorem{definition}             {\definitionname}  [chapter]
 \newtheorem{example}                {\examplename}     [chapter]
 \newtheorem*{remark}                {\remarkname}
+
 % From MDPI.cls
 %\renewcommand{\qed}{\unskip\nobreak\quad\qedsymbol} %% This places the symbol right after the text instead of placing it at the end on the line.
 \renewenvironment{proof}[1][\proofname]{\par %% \proofname allows to have "Proof of my theorem"
@@ -219,7 +247,7 @@
 \newcommand{\refcolor}[1]{\gdef\@refcolor{#1}}
 \def\@emptypagewords{} % 空白页留字
 \newcommand{\emptypagewords}[1]{\gdef\@emptypagewords{#1}}
-\def\@beginright{} % 摘要、目录、第一章右侧打开 on/off
+\def\@beginright{} % 摘要、目录、第一章右侧页起 on/off
 \newcommand{\beginright}[1]{\gdef\@beginright{#1}}
 
 \newcommand{\Title}[2]{\gdef\@titlecn{#1} \gdef\@titleen{#2}}
