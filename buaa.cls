@@ -352,16 +352,27 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % 设置目录格式
-\titlecontents{chapter}[0pt]{\heiti\zihao{-4}}{\thecontentslabel\ }{}
-{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{section}[2em]{\songti\zihao{-4}}{\thecontentslabel\ }{}
-{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{subsection}[3em]{\songti\zihao{-4}}{\thecontentslabel\ }{}
-{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{figure}[0pt]{\songti\zihao{-4}}{图~\thecontentslabel\quad}{}
-{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
-\titlecontents{table}[0pt]{\songti\zihao{-4}}{表~\thecontentslabel\quad}{}
-{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{chapter}[0pt]{\settowidth{\hangindent}{\thecontentslabel}\heiti\zihao{-4}}
+{\thecontentslabel}{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{section}[2em]{\settowidth{\hangindent}{\thecontentslabel\ \ }\songti\zihao{-4}}
+{\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{subsection}[3em]{\settowidth{\hangindent}{\thecontentslabel\ \ }\songti\zihao{-4}}
+{\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+
+\titlecontents{figure}[0pt]{\settowidth{\hangindent}{图~\thecontentslabel\ \ }\songti\zihao{-4}}
+{图~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{table}[0pt]{\settowidth{\hangindent}{表~\thecontentslabel\ \ }\songti\zihao{-4}}
+{表~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
 % 图表环境设置
 \let\org@table\table
