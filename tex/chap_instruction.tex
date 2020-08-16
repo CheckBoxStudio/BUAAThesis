@@ -24,7 +24,7 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
  \verb|tex/*.tex|                 & $\triangleright$ 本模板样例中的独立章节\\
 \end{tabular}\\
 
-通过 \verb|\documentclass[<thesis>,<permission>,<printtype>,<ostype>,<ctexbookoptions>]{buaa}|载入宏包：
+通过 \verb|\documentclass[| \verb|<thesis>,| \verb|<permission>,| \verb|<printtype>,| \verb|<ostype>,| \verb|<ctexbookoptions>| \verb|]{buaa}|载入宏包：
 \begin{itemize}[leftmargin=3cm]
   \item[{\tt thesis} $\triangleright$]  论文类型(thesis)，可选值：\\
     a) 学术硕士论文（\verb|master|）[缺省值]\\
@@ -60,16 +60,19 @@ Again，这是北航论文\LaTeX{}模板（\CTeX{}-Based）\BUAAThesis{}。
     例如，使用{\tt fontset=founder}选项启用方正字体以避免生僻字乱码的问题\footnote{需要系统安装方正字体。}。
 \end{itemize}
 
-模板已内嵌LaTeX工具包：
- {\tt ifthen}，{\tt etoolbox}，{\tt titletoc}，{\tt remreset}，
- {\tt geometry}，{\tt fancyhdr}，{\tt setspace}，{\tt float}，
- {\tt graphicx}，{\tt subfigure}，{\tt epstopdf}，{\tt array}, {\tt enumitem}，
- {\tt booktabs}，{\tt longtable}，{\tt multirow}，{\tt caption}，
- {\tt listings}，{\tt algorithm2e}，{\tt amsmath}，{\tt amsthm}，
- {\tt hyperref}，{\tt pifont}，{\tt color}，{\tt soul}；\\
- For Windows: {\tt times}, {\tt newtxmath}；\\
- For Linux: {\tt newtxtext}, {\tt newtxmath}；\\
- For Mac: {\tt times}, {\tt fontspec}。
+
+\setlength{\hangindent}{4em}
+模板已内嵌LaTeX工具包：\\
+{\tt ifthen}，{\tt etoolbox}，{\tt titletoc}，{\tt remreset}，
+{\tt geometry}，{\tt fancyhdr}，{\tt setspace}，{\tt float}，
+{\tt graphicx}，{\tt subfigure}，{\tt epstopdf}，{\tt array}，{\tt enumitem}，
+{\tt booktabs}，{\tt longtable}，{\tt multirow}，{\tt caption}，
+{\tt listings}，{\tt algorithm2e}，{\tt amsmath}，{\tt amsthm}，
+{\tt hyperref}，{\tt pifont}，{\tt color}，{\tt soul}；\\
+For Windows: {\tt times}, {\tt newtxmath}；\\
+For Linux: {\tt newtxtext}, {\tt newtxmath}；\\
+For Mac: {\tt times}, {\tt fontspec}。
+
 
 模板已内嵌宏：\verb|\highlight{text}|（黄色高亮）。
 
