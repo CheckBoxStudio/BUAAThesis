@@ -565,7 +565,7 @@
   \ifthenelse{\equal{#1}{软件学院}}{School of Software}{%
   \ifthenelse{\equal{#1}{继续教育学院}}{College of Continuing Education}{%
   \ifthenelse{\equal{#1}{高等理工学院}}{School of Advance Engineering}{%
-  \ifthenelse{\equal{#1}{中法工程师学院}}{Central Pekin}{%
+  \ifthenelse{\equal{#1}{中法工程师学院}}{Sino-French Engineer School}{%
   \ifthenelse{\equal{#1}{国际学院}}{Beihang School}{%
   \ifthenelse{\equal{#1}{新媒体艺术与设计学院}}{School of New Media Art and Design}{%
   \ifthenelse{\equal{#1}{化学学院}}{School of Chemistry}{%
