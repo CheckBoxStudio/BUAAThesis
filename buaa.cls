@@ -578,7 +578,8 @@
   \ifthenelse{\equal{#1}{医工交叉创新研究院}}{Interdisciplinary Innovation Institute for Medicine and Engineering}{%
   \ifthenelse{\equal{#1}{北斗丝路学院}}{School of BeiDou and the Silk Road}{%
   \ifthenelse{\equal{#1}{网络空间安全学院}}{School of Cyberspace Security}{%
-  }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+  \ifthenelse{\equal{#1}{人工智能研究院}}{Institue of Artificial Intelligence}{%
+  }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
