@@ -172,6 +172,13 @@
   \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
 }{}
 
+% 根据不同编译系统选择正确的 Times New Roman字体
+\usepackage{iftex}
+\ifpdftex
+\else
+\setmainfont{Times New Roman}
+\fi
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 数学环境
 % 数学符号：
