@@ -625,12 +625,13 @@
 
   {\zihao{5} \heiti \noindent
     \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
-    \hfill \TranSecretLevel{\@permission}
     \\
     \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}
+    \\
+    \TranSecretLevel{\@permission}
   }
 
-  \vspace{80pt}
+  \vspace{60pt}
 
   \begin{figure}[h]
     \centering
@@ -731,8 +732,7 @@
 {\pdfbookmark[0]{题目页}{makecoverinner}
 
   {\zihao{5} \heiti \noindent
-    \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
-    \hfill \TranSecretLevel{\@permission}
+    \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}
     \\
     \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}
   }
