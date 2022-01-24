@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板 - LaTeX 03-07-2020
-%% %% 论文样式参考自《研究生手册--二〇一五年八月》
+%% %% 北航研究生毕业论文模板 - LaTeX 01-24-2022
+%% %% 论文样式参考自《研究生手册--二〇二〇年七月》
 %% %% 基于ctexbook
 %% %%
 %% %% 初始版本作者:
@@ -10,6 +10,7 @@
 %% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v3.1  WeiQM (01-24-2022)
 %% %%   v3.0  WeiQM (03-07-2020)
 %% %%   v2.2  WeiQM (11-30-2019)
 %% %%   v2.1  QiaoJF, WeiQM (12-19-2018)
@@ -24,16 +25,17 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2020/03/07 v3.0 BUAA thesis class]
-\typeout{This is LaTeX template buaa. Version 3.0 (based on CTeX) 03-07-2020}
+\ProvidesClass{buaa}[2022/01/24 v3.1 BUAA thesis class]
+\typeout{This is LaTeX template buaa. Version 3.1 (based on CTeX) 01-24-2022}
 
 %% 选项
 %% 论文类型
 \DeclareOption{master}{\gdef\@thesis{master}}             % 学术硕士论文
 \DeclareOption{professional}{\gdef\@thesis{professional}} % 专业硕士论文
 \DeclareOption{doctor}{\gdef\@thesis{doctor}}             % 博士论文
+\DeclareOption{prodoctor}{\gdef\@thesis{prodoctor}}       % 专业博士论文
 \DeclareOption{thesis}{\ClassWarning{buaa}{%
-  You have not specified the THESIS option. The word thesis should be replaced by one of the following thesis type: master(default), professional, doctor.
+  You have not specified the THESIS option. The word thesis should be replaced by one of the following thesis type: master(default), professional, doctor, prodoctor.
 }}
 
 %% 密级
@@ -75,8 +77,9 @@
 
 %% 适应首字母大写
 \DeclareOption{Master}{\gdef\@thesis{master}}
-\DeclareOption{Professional }{\gdef\@thesis{professional }}
+\DeclareOption{Professional}{\gdef\@thesis{professional}}
 \DeclareOption{Doctor}{\gdef\@thesis{doctor}}
+\DeclareOption{ProDoctor}{\gdef\@thesis{prodoctor}}
 \DeclareOption{Public}{\gdef\@permission{public}}
 \DeclareOption{Privacy}{\gdef\@permission{privacy}}
 \DeclareOption{Secret}{\gdef\@permission{secret3}}
@@ -113,7 +116,7 @@
 
 %% BUAAThesis字样及版本信息
 \usepackage{graphicx}
-\def\BUAAThesisVer{v3.0 03-07-2020}
+\def\BUAAThesisVer{v3.1 01-24-2022}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -613,7 +616,7 @@
   \fancyhead[CE]{\zihao{-5} \leftmark}
   \ifthenelse{\equal{\@thesis}{master} \OR \equal{\@thesis}{professional}}{%
       \fancyhead[CO]{\zihao{-5} 北京航空航天大学硕士学位论文}}{}
-  \ifthenelse{\equal{\@thesis}{doctor}}{%
+  \ifthenelse{\equal{\@thesis}{doctor} \OR \equal{\@thesis}{prodoctor}}{%
       \fancyhead[CO]{\zihao{-5} 北京航空航天大学博士学位论文}}{}
   \setcounter{page}{1}
 }
@@ -643,7 +646,8 @@
     \ifthenelse{\equal{\@thesis}{master}}{\includegraphics[width=0.9\linewidth]{pic/head-master}}{
     \ifthenelse{\equal{\@thesis}{professional}}{\includegraphics[width=0.9\linewidth]{pic/head-professional}}{
     \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{pic/head-doctor}}{
-    }}}
+    \ifthenelse{\equal{\@thesis}{prodoctor}}{\includegraphics[width=0.9\linewidth]{pic/head-prodoctor}}{
+    }}}}
   \end{figure}
 
   \centering
@@ -697,7 +701,7 @@
     {\zihao{4}
       A Dissertation Submitted for the Degree of
       \ifthenelse{\equal{\@thesis}{master} \OR \equal{\@thesis}{professional}}{Master}{}
-      \ifthenelse{\equal{\@thesis}{doctor}}{Doctor of Philosophy}{}
+      \ifthenelse{\equal{\@thesis}{doctor} \OR \equal{\@thesis}{prodoctor}}{Doctor of Philosophy}{}
     }
 
     \vspace{100pt}
@@ -747,9 +751,10 @@
         \ifthenelse{\equal{\@thesis}{professional}}{%
          \makebox[11\ccwd][s]{硕士学位论文}}{
         \ifthenelse{\equal{\@thesis}{doctor}}{%
+          \makebox[11\ccwd][s]{博士学位论文}}{
+        \ifthenelse{\equal{\@thesis}{prodoctor}}{%
           \makebox[11\ccwd][s]{博士学位论文}}{}
-        }}
-
+        }}}
     }
 
     \vspace{50pt}
@@ -771,7 +776,7 @@
       作者姓名     &          \multicolumn{3}{l}{\@authorcn}                   & 申请学位级别        &   \multicolumn{3}{l}{ \hspace{-6pt}
         \@branch \hspace{-0.5\ccwd}
         \ifthenelse{\equal{\@thesis}{master} \OR \equal{\@thesis}{professional}}{硕士}{
-        \ifthenelse{\equal{\@thesis}{doctor}}{博士}{}}
+        \ifthenelse{\equal{\@thesis}{doctor} \OR \equal{\@thesis}{prodoctor}}{博士}{}}
       }       \\
       指导教师姓名 &          \multicolumn{3}{l}{\@tutorcn}                    & 职\hspace{2\ccwd}称 &                        \multicolumn{3}{l}{\@tutordegree}                      \\
       学科专业     &          \multicolumn{3}{l}{\@major}                      & 研究方向            &                        \multicolumn{3}{l}{\@feild}                            \\
@@ -944,7 +949,8 @@
   \ifthenelse{\equal{\@thesis}{master}}{\chapter{攻读硕士学位期间取得的学术成果}}{
   \ifthenelse{\equal{\@thesis}{professional}}{\chapter{攻读硕士学位期间取得的学术成果}}{
   \ifthenelse{\equal{\@thesis}{doctor}}{\chapter{攻读博士学位期间取得的研究成果}}{
-  }}}
+  \ifthenelse{\equal{\@thesis}{prodoctor}}{\chapter{攻读博士学位期间取得的研究成果}}{
+  }}}}
 
   \setcounter{section}{0}%
   \setcounter{subsection}{0}%

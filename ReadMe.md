@@ -2,7 +2,7 @@
 
 > **本模板仅为个人兴趣之作，非官方模板。**
 
-本项目为北京航空航天大学学位论文模板BUAAThesis，包含Word模板和LaTeX模板(基于[ctexbook](https://ctan.org/pkg/ctex))。模板按照2015年8月版《研究生手册》制定，适用于理工类博士、硕士、专业硕士学位论文（中文）。
+本项目为北京航空航天大学学位论文模板BUAAThesis，包含Word模板和LaTeX模板(基于[ctexbook](https://ctan.org/pkg/ctex))。模板按照2015年8月版《研究生手册》制定，根据2020年7月修订版调整，适用于理工类博士、硕士学位论文（中文）。
 
 
 ## 下载地址
@@ -20,9 +20,10 @@ BUAAThesis
  |- bst/GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
  |- bst/GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
  |- pic/logo-buaa.eps         // 论文封皮北航字样
- |- pic/head-doctor.eps       // 论文封皮北博士学位论文标题(华文行楷字体替代解决方案)
- |- pic/head-master.eps       // 论文封皮北学硕学位论文标题(华文行楷字体替代解决方案)
- |- pic/head-professional.eps // 论文封皮北专硕学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-doctor.eps       // 论文封皮学术博士学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-prodoctor.eps    // 论文封皮专业博士学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-master.eps       // 论文封皮学术硕士学位论文标题(华文行楷字体替代解决方案)
+ |- pic/head-professional.eps // 论文封皮专业硕士学位论文标题(华文行楷字体替代解决方案)
  |- tex/*.tex                 // LaTeX模板样例中的独立章节
  |- ReadMe.md                 // 本文件
  |- .gitignore                // Git忽略规则
