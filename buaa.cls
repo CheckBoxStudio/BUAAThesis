@@ -937,12 +937,12 @@
   \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
   %
 
-  \renewcommand{\thefigure}{A\arabic{figure}}
-  \setcounter{figure}{0}
-  \renewcommand{\thetable}{A\arabic{table}}
-  \setcounter{table}{0}
-  \renewcommand{\theequation}{A\arabic{equation}}
-  \setcounter{equation}{0}
+  \renewcommand{\thefigure}{\thesection\arabic{figure}}
+  \numberwithin{figure}{section}
+  \renewcommand{\thetable}{\thesection\arabic{table}}
+  \numberwithin{table}{section}
+  \renewcommand{\theequation}{\thesection\arabic{equation}}
+  \numberwithin{equation}{section}
 }
 \newcommand{\achievement}{%学术成果
   \ctexset{chapter/numbering=false}
