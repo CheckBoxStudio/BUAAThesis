@@ -432,6 +432,7 @@
 }
 
 % 设置参考文献格式
+\usepackage{notoccite}
 \newcommand\bibstyle@super{\bibpunct{[}{]}{,}{s}{,}{\textsuperscript{,}}}
 \newcommand\bibstyle@numbers{\bibpunct{[}{]}{,}{n}{,}{,}}
 \newcommand\bibstyle@authoryear{\bibpunct{(}{)}{;}{a}{,}{,}}
@@ -956,8 +957,8 @@
   \setcounter{subsection}{0}%
   \setcounter{subsubsection}{0}%
   %
-  \gdef\thesection{\@Alph\c@section}%
-  \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+  \gdef\thesection{\zhnum{section}}%
+  \gdef\thesubsection{\@arabic\c@section.\@arabic\c@subsection}%
   %
 
   \renewcommand{\thefigure}{A\arabic{figure}}
