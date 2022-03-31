@@ -299,50 +299,6 @@
 \newcommand{\Abbreviations}[1]{\gdef\@abbreviations{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% CTeX调整
-% 半角/缩进/行伸缩设置
-\ctexset{%
-  punct=quanjiao, % 全角
-  autoindent=2,  % 缩进
-  linestretch=2, % 行伸缩
-}
-% 部分标题修改
-\ctexset{%
-  contentsname={目~~~~录},
-  listfigurename={图~清~单},
-  listtablename={表~清~单},
-}
-% 标题样式修改
-\ctexset{%
-  chapter={%章标题 : 三号黑体居中 单倍行距 段前/段后0.5行 另起新页
-    format=\zihao{3} \heiti \centering \thispagestyle{fancy},
-    fixskip=true,
-    beforeskip=19.27pt,
-    afterskip=22.48pt,
-    break=\clearpage,
-  },
-  section={%节标题 : 四号黑体居左 单倍行距 段前/段后0.5行
-    format=\zihao{4} \heiti \raggedright,
-    beforeskip=8.43pt,
-    afterskip=11.24pt,
-  },
-  subsection={%条标题 : 小四号黑体居左 单倍行距 段前/段后0.5行
-    format=\zihao{-4} \heiti \raggedright,
-    beforeskip=3.61pt,
-    afterskip=3.61pt,
-  },
-  subsubsection={% 附加4级标题 : 小四号宋体加粗居左
-    format=\zihao{-4} \songti \raggedright,
-  },
-  paragraph={% 附加5级标题 : 小四号宋体居左
-    format=\zihao{-4} \songti \raggedright,
-  },
-  subparagraph={% 附加6级标题 : 小四号宋体居左
-    format=\zihao{-4} \songti \raggedright,
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 页面设置
 % 设置页面大小
 % A4纸页边距均25mm
@@ -591,6 +547,50 @@
   \ifthenelse{\equal{#1}{网络空间安全学院}}{School of Cyberspace Security}{%
   \ifthenelse{\equal{#1}{人工智能研究院}}{Institue of Artificial Intelligence}{%
   }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CTeX调整
+% 半角/缩进/行伸缩设置
+\ctexset{%
+    punct=quanjiao, % 全角
+    autoindent=2,  % 缩进
+    linestretch=2, % 行伸缩
+}
+% 部分标题修改
+\ctexset{%
+    contentsname={目~~~~录},
+    listfigurename={图~清~单},
+    listtablename={表~清~单},
+}
+% 标题样式修改
+\ctexset{%
+    chapter={%章标题 : 三号黑体居中 单倍行距 段前/段后0.5行 另起新页
+        format=\zihao{3} \heiti \centering \thispagestyle{fancy},
+        fixskip=true,
+        beforeskip=19.27pt,
+        afterskip=22.48pt,
+        break=\clearautopage,
+    },
+    section={%节标题 : 四号黑体居左 单倍行距 段前/段后0.5行
+        format=\zihao{4} \heiti \raggedright,
+        beforeskip=8.43pt,
+        afterskip=11.24pt,
+    },
+    subsection={%条标题 : 小四号黑体居左 单倍行距 段前/段后0.5行
+        format=\zihao{-4} \heiti \raggedright,
+        beforeskip=3.61pt,
+        afterskip=3.61pt,
+    },
+    subsubsection={% 附加4级标题 : 小四号宋体加粗居左
+        format=\zihao{-4} \songti \raggedright,
+    },
+    paragraph={% 附加5级标题 : 小四号宋体居左
+        format=\zihao{-4} \songti \raggedright,
+    },
+    subparagraph={% 附加6级标题 : 小四号宋体居左
+        format=\zihao{-4} \songti \raggedright,
+    }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
