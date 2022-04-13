@@ -154,7 +154,7 @@
 \RequirePackage{algorithm2e}  % 算法环境
 \RequirePackage{amsmath}      % 数学
 \RequirePackage{amsthm}       % 定理
-\RequirePackage{hyperref}     % 超链接
+\RequirePackage[hypertexnames=false]{hyperref}      % 超链接
 \RequirePackage{pifont}       % 画五角星
 \RequirePackage{color}        % To provide color for soul
 \RequirePackage{soul}         % To highlight text
