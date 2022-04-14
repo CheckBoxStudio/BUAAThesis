@@ -478,21 +478,21 @@
   }
 }
 \newcommand{\TranSecretLevel}[1]{%密级翻译
-  \ifthenelse{\equal{\@permission}{public}}{\relax}{
-  \ifthenelse{\equal{\@permission}{privacy}}{内~~部}{
-  \ifthenelse{\equal{\@permission}{secret3}}{秘密~\ding{73}~{\bfseries 3}年}{
-  \ifthenelse{\equal{\@permission}{secret5}}{秘密~\ding{73}~{\bfseries 5}年}{
-  \ifthenelse{\equal{\@permission}{secret10}}{秘密~\ding{73}~{\bfseries 10}年}{
-  \ifthenelse{\equal{\@permission}{secret*}}{秘密~\ding{73}~永久}{
-  \ifthenelse{\equal{\@permission}{classified3}}{机密~\ding{73}~{\bfseries 3}年}{
-  \ifthenelse{\equal{\@permission}{classified5}}{机密~\ding{73}~{\bfseries 5}年}{
-  \ifthenelse{\equal{\@permission}{classified10}}{机密~\ding{73}~{\bfseries 10}年}{
-  \ifthenelse{\equal{\@permission}{classified*}}{机密~\ding{73}~永久}{
-  \ifthenelse{\equal{\@permission}{topsecret3}}{绝密~\ding{73}~{\bfseries 3}年}{
-  \ifthenelse{\equal{\@permission}{topsecret5}}{绝密~\ding{73}~{\bfseries 5}年}{
-  \ifthenelse{\equal{\@permission}{topsecret10}}{绝密~\ding{73}~{\bfseries 10}年}{
-  \ifthenelse{\equal{\@permission}{topsecret*}}{绝密~\ding{73}~永久}{
-  \ifthenelse{\equal{\@permission}{permission*}}{密级~\ding{73}~保密期限}{
+  \ifthenelse{\equal{\@permission}{public}}{\relax}{%
+  \ifthenelse{\equal{\@permission}{privacy}}{内~~部}{%
+  \ifthenelse{\equal{\@permission}{secret3}}{秘密~\ding{73}~{\bfseries 3}年}{%
+  \ifthenelse{\equal{\@permission}{secret5}}{秘密~\ding{73}~{\bfseries 5}年}{%
+  \ifthenelse{\equal{\@permission}{secret10}}{秘密~\ding{73}~{\bfseries 10}年}{%
+  \ifthenelse{\equal{\@permission}{secret*}}{秘密~\ding{73}~永久}{%
+  \ifthenelse{\equal{\@permission}{classified3}}{机密~\ding{73}~{\bfseries 3}年}{%
+  \ifthenelse{\equal{\@permission}{classified5}}{机密~\ding{73}~{\bfseries 5}年}{%
+  \ifthenelse{\equal{\@permission}{classified10}}{机密~\ding{73}~{\bfseries 10}年}{%
+  \ifthenelse{\equal{\@permission}{classified*}}{机密~\ding{73}~永久}{%
+  \ifthenelse{\equal{\@permission}{topsecret3}}{绝密~\ding{73}~{\bfseries 3}年}{%
+  \ifthenelse{\equal{\@permission}{topsecret5}}{绝密~\ding{73}~{\bfseries 5}年}{%
+  \ifthenelse{\equal{\@permission}{topsecret10}}{绝密~\ding{73}~{\bfseries 10}年}{%
+  \ifthenelse{\equal{\@permission}{topsecret*}}{绝密~\ding{73}~永久}{%
+  \ifthenelse{\equal{\@permission}{permission*}}{密级~\ding{73}~保密期限}{%
   }}}}}}}}}}}}}}}
 }
 \newcommand{\TranDegree}[1]{%职称翻译
@@ -630,7 +630,7 @@
   {\zihao{5} \heiti \noindent
     \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
     \\
-    \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}
+    \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}%
     \\
     \TranSecretLevel{\@permission}
   }
@@ -644,10 +644,10 @@
   \vspace{-10pt}
   \begin{figure}[h]
     \centering
-    \ifthenelse{\equal{\@thesis}{master}}{\includegraphics[width=0.9\linewidth]{pic/head-master}}{
-    \ifthenelse{\equal{\@thesis}{professional}}{\includegraphics[width=0.9\linewidth]{pic/head-professional}}{
-    \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{pic/head-doctor}}{
-    \ifthenelse{\equal{\@thesis}{prodoctor}}{\includegraphics[width=0.9\linewidth]{pic/head-prodoctor}}{
+    \ifthenelse{\equal{\@thesis}{master}}{\includegraphics[width=0.9\linewidth]{pic/head-master}}{%
+    \ifthenelse{\equal{\@thesis}{professional}}{\includegraphics[width=0.9\linewidth]{pic/head-professional}}{%
+    \ifthenelse{\equal{\@thesis}{doctor}}{\includegraphics[width=0.9\linewidth]{pic/head-doctor}}{%
+    \ifthenelse{\equal{\@thesis}{prodoctor}}{\includegraphics[width=0.9\linewidth]{pic/head-prodoctor}}{%
     }}}}
   \end{figure}
 
@@ -701,8 +701,11 @@
 
     {\zihao{4}
       A Dissertation Submitted for the Degree of
-      \ifthenelse{\equal{\@thesis}{master} \OR \equal{\@thesis}{professional}}{Master}{}
-      \ifthenelse{\equal{\@thesis}{doctor} \OR \equal{\@thesis}{prodoctor}}{Doctor of Philosophy}{}
+      \ifthenelse{\equal{\@thesis}{master}}{Master}{%
+      \ifthenelse{\equal{\@thesis}{professional}}{Master}{%
+      \ifthenelse{\equal{\@thesis}{doctor}}{Doctor of Philosophy}{%
+      \ifthenelse{\equal{\@thesis}{prodoctor}}{Doctor of Engineering}{%
+    }}}}
     }
 
     \vspace{100pt}
