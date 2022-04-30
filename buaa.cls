@@ -379,6 +379,9 @@
 % 缺省为 20pt plus 2pt minus 4pt。
 %\setlength{\textfloatsep}{20bp \@plus2pt \@minus4pt}
 
+% 设置行间距
+\setlength{\parskip}{0pt}
+
 % 列表间接设置
 \setlist{
   topsep=0pt, % 列表环境与上文距离
