@@ -177,7 +177,7 @@
 
 % 根据不同编译系统选择正确的 Times New Roman字体
 \usepackage{iftex}
-\ifpdftex
+\ifPDFTeX
 \else
 \setmainfont{Times New Roman}
 \fi
