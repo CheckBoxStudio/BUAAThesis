@@ -178,7 +178,7 @@ FUNCTION {output.check}
 }
 
 FUNCTION {fin.entry}
-{ add.period$
+{ %add.period$
   write$
   newline$
 }

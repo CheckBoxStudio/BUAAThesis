@@ -480,7 +480,7 @@ FUNCTION {start.bibitem} {                        % void Entry::start_bibitem() 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {end.bibitem} {                          % void Entry::end_bibitem() {
-  cap.period write$                               %   write(cap_period);
+  %cap.period write$                               %   write(cap_period);
   newline$                                        %   writeln();
 }                                                 % }
                                                   %
