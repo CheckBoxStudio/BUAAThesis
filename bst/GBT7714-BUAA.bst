@@ -1,26 +1,31 @@
 %%
+%% Based on `gbt-7714-2015-numerical.bst' from https://github.com/zepinglee/gbt7714-bibtex-style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
 %% This is file `gbt-7714-2015-numerical.bst',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
 %% gbt-7714-2015.dtx  (with options: `numerical')
-%% 
+%%
 %% Copyright (C) 2016-2017 by Zeping Lee <zepinglee AT gmail.com>
-%% 
+%%
 %% This file may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either
 %% version 1.2 of this license or (at your option) any later
 %% version. The latest version of this license is in:
-%% 
+%%
 %%     http://www.latex-project.org/lppl.txt
-%% 
+%%
 %% and version 1.2 or later is part of all distributions of
 %% LaTeX version 1999/12/01 or later.
-%% 
+%%
 %% This BibTeX style file is derived from `plainnat.bst' by Patrick W Daly,
 %% which was designed for use with the `natbib.sty' package.
-%% 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
 ENTRY
   { address
     author
@@ -1204,15 +1209,15 @@ FUNCTION {online}
   format.mark "" output.after
   new.block
   format.address.publisher output
-  date empty$
-    { format.date output }
-    'skip$
-  if$
   format.pages punct.colon output.after
   format.editdate "" output.after
   format.urldate "" output.after
   format.url output
   format.doi output
+  date empty$
+    { format.date output }
+    'skip$
+  if$
   fin.entry
 }
 
