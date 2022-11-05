@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %% <UTF-8>
-%% %% 北航研究生毕业论文模板 - LaTeX 01-24-2022
+%% %% 北航研究生毕业论文模板 - LaTeX 11-04-2022
 %% %% 论文样式参考自《研究生手册--二〇二〇年七月》
 %% %% 基于ctexbook
 %% %%
@@ -10,6 +10,7 @@
 %% %%   Qiao Junfeng (qiaojunfeng@outlook.com)
 %% %%
 %% %% Versions:
+%% %%   v3.2  WeiQM (11-04-2022)
 %% %%   v3.1  WeiQM (01-24-2022)
 %% %%   v3.0  WeiQM (03-07-2020)
 %% %%   v2.2  WeiQM (11-30-2019)
@@ -25,8 +26,8 @@
 
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{buaa}[2022/01/24 v3.1 BUAA thesis class]
-\typeout{This is LaTeX template buaa. Version 3.1 (based on CTeX) 01-24-2022}
+\ProvidesClass{buaa}[2022/11/04 v3.2 BUAA thesis class]
+\typeout{This is LaTeX template buaa. Version 3.2 (based on CTeX) 11-04-2022}
 
 %% 选项
 %% 论文类型
@@ -116,7 +117,7 @@
 
 %% BUAAThesis字样及版本信息
 \usepackage{graphicx}
-\def\BUAAThesisVer{v3.1 01-24-2022}
+\def\BUAAThesisVer{v3.2 11-04-2022}
 \def\BUAAThesis{%
  B%
  {\fontsize{0.8em}{\baselineskip}\selectfont
@@ -159,6 +160,7 @@
 \RequirePackage{color}        % To provide color for soul
 \RequirePackage{soul}         % To highlight text
 \RequirePackage[sort&compress]{natbib}              % BibTex
+\RequirePackage{gbt7714}      % 参考文献bst
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
@@ -391,13 +393,7 @@
 }
 
 % 设置参考文献格式
-\usepackage{notoccite}
-\newcommand\bibstyle@super{\bibpunct{[}{]}{,}{s}{,}{\textsuperscript{,}}}
-\newcommand\bibstyle@numbers{\bibpunct{[}{]}{,}{n}{,}{,}}
-\newcommand\bibstyle@authoryear{\bibpunct{(}{)}{;}{a}{,}{,}}
-\bibpunct{[}{]}{,}{n}{}{}
-\setlength{\bibsep}{0pt}
-\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+
 
 % 设置PDF
 \hypersetup{%
@@ -436,15 +432,15 @@
     Please set defence date by 'DateDefence'.}}{}
   \ifthenelse{\equal{\@refcolor}{\empty}}{}{%
     \ifthenelse{\equal{\@refcolor}{on} \OR \equal{\@refcolor}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for refcolor.}}
+    \errmessage{Please use 'on' or 'off' for refcolor.}}
   }
   \ifthenelse{\equal{\@beginright}{\empty}}{}{%
     \ifthenelse{\equal{\@beginright}{on} \OR \equal{\@beginright}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for beginright.}}
+    \errmessage{Please use 'on' or 'off' for beginright.}}
   }
   \ifthenelse{\isundefined{\@listfigtab}}{}{%
     \ifthenelse{\equal{\@listfigtab}{on} \OR \equal{\@listfigtab}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for listfigtab.}}
+    \errmessage{Please use 'on' or 'off' for listfigtab.}}
   }
 }
 \newcommand{\clearautopage}{%右侧起新页
@@ -927,6 +923,7 @@
   \setcounter{equation}{0}
 }
 \newcommand{\Bib}[2]{%参考文献
+    \nocite{*}
   \bibliographystyle{#1}
   \clearpage
   \phantomsection

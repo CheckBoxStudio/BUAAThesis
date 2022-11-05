@@ -17,8 +17,6 @@ BUAAThesis
  |- Template.tex              // LaTeX模板
  |- Template.docx             // Word模板
  |- ref.bib                   // LaTeX模板中的参考文献Bib文件
- |- bst/GBT7714-2005.bst      // 国标参考文献BibTeX样式文件2005版
- |- bst/GBT7714-2015.bst      // 国标参考文献BibTeX样式文件2015版
  |- pic/logo-buaa.eps         // 论文封皮北航字样
  |- pic/head-doctor.eps       // 论文封皮学术博士学位论文标题(华文行楷字体替代解决方案)
  |- pic/head-prodoctor.eps    // 论文封皮专业博士学位论文标题(华文行楷字体替代解决方案)
@@ -32,7 +30,8 @@ BUAAThesis
 ## 模板使用
 
 + Word: 直接在其上进行修改编写，请记得预先备份；
-+ LaTeX: 参看LaTeX模板示例template.tex及相应插入章节tex/*.tex。
++ LaTeX: 参考LaTeX模板示例template.tex及相应插入章节tex/*.tex；
++ BibTex: 参考文献著录BibTeX样式请参见[Zeping Lee](https://github.com/zepinglee)提供的BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)。
 
 ## 关于图书馆查重
 
@@ -58,7 +57,7 @@ BUAAThesis
 
 ## 致谢
 
-感谢[Haixing Hu](https://github.com/Haixing-Hu)提供的2005版参考文献著录BibTeX样式[GBT7714-2005](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)及[Zeping Lee](https://github.com/zepinglee)提供的2015版参考文献著录BibTeX样式[GBT7714-2015](https://github.com/zepinglee/gbt7714-bibtex-style)，为本项目LaTeX模板的形成提供了很大的帮助。感谢[BwCai](https://github.com/BwCai)提供的Mac编译环境。
+感谢许久已来各位使用者的反馈及意见。
 
 ***
 

@@ -4,8 +4,6 @@
 %% %% 请将以下文件与此LaTeX文件放在同一目录中.
 %% %%-----------
 %% %% buaa.cls                  : LaTeX宏模板文件
-%% %% bst/GBT7714-2005.bst      : 国标参考文献BibTeX样式文件2005(https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
-%% %% bst/GBT7714-2015.bst      : 国标参考文献BibTeX样式文件2015(https://github.com/zepinglee/gbt7714-bibtex-style)
 %% %% pic/logo-buaa.eps         : 论文封皮北航字样
 %% %% pic/head-doctor.eps       : 论文封皮学术博士学位论文标题(华文行楷字体替代解决方案)
 %% %% pic/head-prodoctor.eps    : 论文封皮专业博士学位论文标题(华文行楷字体替代解决方案)
@@ -94,7 +92,7 @@
 % array, enumitem,
 % booktabs, longtable, multirow, caption,
 % listings, algorithm2e, amsmath, amsthm,
-% hyperref, pifont, color, soul,
+% hyperref, pifont, color, soul
 % ---
 % For Win: times
 % For Lin: newtxtext, newtxmath
@@ -212,9 +210,11 @@
 \input{tex/chap_summary}
 
 % 参考文献
-% 2015版国标GBT7714-2015
-% 2005版国标GBT7714-2005
-\Bib{bst/GBT7714-2015}{ref}
+% 2005标准著作-出版制 ：gbt7714-2005-author-year
+% 2005标准顺序编码制：gbt7714-2005-numerical
+% 2015标准著作-出版制 ：gbt7714-author-year
+% 2015标准顺序编码制： gbt7714-numerical
+\Bib{gbt7714-numerical}{ref}
 
 % 附录
 \input{tex/chap_appendix}

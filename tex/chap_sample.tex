@@ -9,7 +9,7 @@
 \subsection{数字标注}
 \noindent
 \begin{tabular}{l@{\quad$\Rightarrow$\quad}l}
-  \verb|\cite{knuth86a}| & \cite{knuth86a}\\
+  \verb|\cite{weddb}| & \cite{knuth86a}\\
   \verb|\citet{knuth86a}| & \citet{knuth86a}\\
   \verb|\citet[chap.~2]{knuth86a}| & \citet[chap.~2]{knuth86a}\\[0.5ex]
   \verb|\citep{knuth86a}| & \citep{knuth86a}\\
@@ -24,25 +24,14 @@
   \verb|\citet{knuth86a,tlc2}| & \citet{knuth86a,tlc2}\\
   \verb|\citep{knuth86a,tlc2}| & \citep{knuth86a,tlc2}\\
   \verb|\cite{knuth86a,knuth84}| & \cite{knuth86a,knuth84}\\
-  \verb|\upcite{knuth86a,knuth84}| & \upcite{knuth86a,knuth84}\\
   \verb|\citet{knuth86a,knuth84}| & \citet{knuth86a,knuth84}\\
   \verb|\citep{knuth86a,knuth84}| & \citep{knuth86a,knuth84}\\
   \verb|\cite{knuth86a,knuth84,tlc2}| & \cite{knuth86a,knuth84,tlc2}\\
 \end{tabular}
 
 %--------------------------------
-\subsection{数字标注-上标形式}
-\noindent
-\begin{tabular}{l@{\quad$\Rightarrow$\quad}l}
-  \verb|\upcite{knuth86a}| & \upcite{knuth86a}\\
-  \verb|\upcite{knuth86a,knuth84,tlc2}| & \upcite{knuth86a,knuth84,tlc2}\\
-\end{tabular}
-\par\noindent
-实现源码：\verb|\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}|。
-
-
-%--------------------------------
 \subsection{著者-出版年制标}
+% 或使用gbt7714-author-year
 \citestyle{authoryear}
 \noindent
 \begin{tabular}{l@{\quad$\Rightarrow$\quad}l}
@@ -101,7 +90,7 @@
   \caption{A How to (plain).}
   \KwData{this text}
   \KwResult{how to write algorithm with \LaTeX2e{} }
-  
+
   initialization\;
   \While{not at end of this document}{
     read current\;
@@ -121,7 +110,7 @@
   \caption{A How to (ruled).}
   \KwData{this text}
   \KwResult{how to write algorithm with \LaTeX2e{} }
-  
+
   initialization\;
   \While{not at end of this document}{
     read current\;
@@ -139,7 +128,7 @@
   \caption{A How to (boxed).}
   \KwData{this text}
   \KwResult{how to write algorithm with \LaTeX2e{} }
-  
+
   initialization\;
   \While{not at end of this document}{
     read current\;
@@ -157,7 +146,7 @@
   \caption{A How to (boxruled).}
   \KwData{this text}
   \KwResult{how to write algorithm with \LaTeX2e{} }
-  
+
   initialization\;
   \While{not at end of this document}{
     read current\;
@@ -249,7 +238,7 @@
   % 续页表尾
   \bottomrule
   \endlastfoot
-  
+
   AAAAAAAAAAAA   &   BBBBBBBBBBB   &   CCCCCCCCCCCCCC   \\
   AAAAAAAAAAAA   &   BBBBBBBBBBB   &   CCCCCCCCCCCCCC   \\
   AAAAAAAAAAAA   &   BBBBBBBBBBB   &   CCCCCCCCCCCCCC   \\
