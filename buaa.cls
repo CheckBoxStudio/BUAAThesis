@@ -162,6 +162,15 @@
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
+\RequirePackage{newfloat}     
+\RequirePackage{stfloats}
+\RequirePackage[lang=english,listtype+=Eng]{bicaption}
+\RequirePackage{babel}
+\captionsetup[figure][bi-first]{name=图}      %设置图的中文前缀
+\captionsetup[table][bi-first]{name=表}       %设置表的中文前缀
+\captionsetup[figure][bi-second]{name=Fig.}   %设置图的英文前缀
+\captionsetup[table][bi-second]{name=Table}   %设置表的英文前缀
+
 % 根据不同系统调整
 \ifthenelse{\equal{\@ostype}{win}}{ % win 配置
   \RequirePackage{times}        % Times New Roman字体
@@ -319,6 +328,11 @@
 
 % 设置目录格式
 
+% Define the new floating environment type "figureEng"
+\DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][\sc List of Figures]
+% Define the new floating environment type "tableEng"
+\DeclareFloatingEnvironment[fileext=lot2]{tableEng}[Table][\sc List of Tables]
+
 \titlecontents{chapter}[0pt]{\settowidth{\hangindent}{\thecontentslabel}\heiti\zihao{-4}}
 {\thecontentslabel}{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
@@ -336,8 +350,16 @@
 {图~\thecontentslabel\ \ }{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
+\titlecontents{figureEng}[0pt]{\settowidth{\hangindent}{Fig.~\thecontentslabel\ \ }\songti\zihao{-4}}
+{Fig.~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
 \titlecontents{table}[0pt]{\settowidth{\hangindent}{表~\thecontentslabel\ \ }\songti\zihao{-4}}
 {表~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{tableEng}[0pt]{\settowidth{\hangindent}{Table~\thecontentslabel\ \ }\songti\zihao{-4}}
+{Table~\thecontentslabel\ \ }{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
 % 图表环境设置
@@ -360,10 +382,16 @@
 \renewcommand{\p@subfigure}{\thefigure}
 
 \DeclareCaptionFormat{tabfigformat}{\bf\songti\zihao{5}{#1~~#3}}
-\captionsetup[figure]{
+\captionsetup[figure][bi-first]{
   position=bottom, margin=0mm, format=tabfigformat,
   aboveskip=6pt, belowskip=-15pt, justification=centerlast}
-\captionsetup[table]{
+\captionsetup[figure][bi-second]{
+  position=bottom, margin=0mm, format=tabfigformat,
+  aboveskip=6pt, belowskip=-15pt, justification=centerlast}
+\captionsetup[table][bi-first]{
+  position=top, margin=0mm, format=tabfigformat,
+  aboveskip=0pt, belowskip=0pt, justification=centerlast}
+\captionsetup[table][bi-second]{
   position=top, margin=0mm, format=tabfigformat,
   aboveskip=0pt, belowskip=0pt, justification=centerlast}
 
@@ -871,8 +899,17 @@
       \pdfbookmark[0]{图目录}{listoffigures}
       \listoffigures
       \clearpage
+
+      \pdfbookmark[0]{List of Figures}{listoffigureEnges}
+      \listoffigureEnges
+      \clearpage
+
       \pdfbookmark[0]{表目录}{listoftables}
       \listoftables
+      \clearpage
+
+      \pdfbookmark[0]{List of Tables}{listoftableEnges}
+      \listoftableEnges
     }{}
   }
   \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
