@@ -900,13 +900,6 @@
   \gdef\thesection{\@Alph\c@section}%
   \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
   %
-
-  \renewcommand{\thefigure}{A\arabic{figure}}
-  \setcounter{figure}{0}
-  \renewcommand{\thetable}{A\arabic{table}}
-  \setcounter{table}{0}
-  \renewcommand{\theequation}{A\arabic{equation}}
-  \setcounter{equation}{0}
 }
 \newcommand{\summary}{%结论
   \ctexset{chapter/numbering=false}
@@ -918,13 +911,6 @@
   \gdef\thesection{\@Alph\c@section}%
   \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
   %
-
-  \renewcommand{\thefigure}{A\arabic{figure}}
-  \setcounter{figure}{0}
-  \renewcommand{\thetable}{A\arabic{table}}
-  \setcounter{table}{0}
-  \renewcommand{\theequation}{A\arabic{equation}}
-  \setcounter{equation}{0}
 }
 \newcommand{\Bib}[2]{%参考文献
   \bibliographystyle{#1}
@@ -943,14 +929,22 @@
   \gdef\thesection{\@Alph\c@section}%
   \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
   %
-
-  \renewcommand{\thefigure}{\thesection\arabic{figure}}
-  \numberwithin{figure}{section}
-  \renewcommand{\thetable}{\thesection\arabic{table}}
-  \numberwithin{table}{section}
-  \renewcommand{\theequation}{\thesection\arabic{equation}}
-  \numberwithin{equation}{section}
 }
+
+\newcounter{multappendix}
+\newcommand{\multappendix}{% 附录
+    \addtocounter{multappendix}{1}
+    \ctexset{chapter/numbering=false}
+    \chapter{附~~~~录~~~~\Alph{multappendix} }
+    \setcounter{section}{0}%
+    \setcounter{subsection}{0}%
+    \setcounter{subsubsection}{0}%
+    %
+    \gdef\thesection{\@Alph\c@multappendix.\@arabic\c@section}%
+    \gdef\thesubsection{\@Alph\c@multappendix.\@arabic\c@section.\@arabic\c@subsection}%
+    %
+}
+
 \newcommand{\achievement}{%学术成果
   \ctexset{chapter/numbering=false}
   \ifthenelse{\equal{\@thesis}{master}}{\chapter{攻读硕士学位期间取得的学术成果}}{
