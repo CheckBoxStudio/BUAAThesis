@@ -150,10 +150,14 @@
 \RequirePackage{longtable}    % 长表格
 \RequirePackage{multirow}     % 多行表格
 \RequirePackage{caption}      % 标题设置
+\RequirePackage[lang=english,listtype+=Eng]{bicaption} % 双标题
 \RequirePackage{listings}     % 代码环境
 \RequirePackage{algorithm2e}  % 算法环境
+\RequirePackage{newfloat}     % 浮动环境
+\RequirePackage{stfloats}     % 浮动
 \RequirePackage{amsmath}      % 数学
 \RequirePackage{amsthm}       % 定理
+\RequirePackage{babel}        % 多语言
 \RequirePackage[hypertexnames=false]{hyperref}      % 超链接
 \RequirePackage{pifont}       % 画五角星
 \RequirePackage{color}        % To provide color for soul
@@ -295,7 +299,7 @@
 
 \newcommand{\Abstract}[2]{\gdef\@abstrctcn{#1} \gdef\@abstrcten{#2}}
 \newcommand{\Keyword}[2]{\gdef\@keywordcn{#1} \gdef\@keyworden{#2}}
-\newcommand{\Listfigtab}[1]{\gdef\@listfigtab{#1}} % on/off
+\newcommand{\Listfigtab}[1]{\gdef\@listfigtab{#1}} % on/bi/off
 \newcommand{\Abbreviations}[1]{\gdef\@abbreviations{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,6 +344,14 @@
 {表~\thecontentslabel\ \ }{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
+\titlecontents{figureEng}[0pt]{\settowidth{\hangindent}{Fig.~\thecontentslabel\ \ }\songti\zihao{-4}}
+{Fig.~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
+\titlecontents{tableEng}[0pt]{\settowidth{\hangindent}{Tab.~\thecontentslabel\ \ }\songti\zihao{-4}}
+{Tab.~\thecontentslabel\ \ }{}
+{\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
 % 图表环境设置
 \let\org@table\table
 \let\org@endtable\endtable
@@ -359,11 +371,29 @@
 \renewcommand{\thetable}{\arabic{table}}
 \renewcommand{\p@subfigure}{\thefigure}
 
+% Define the new floating environment type "figureEng"
+\DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][\sc List of Figures]
+% Define the new floating environment type "tableEng"
+\DeclareFloatingEnvironment[fileext=lot2]{tableEng}[Table][\sc List of Tables]
+
 \DeclareCaptionFormat{tabfigformat}{\bf\songti\zihao{5}{#1~~#3}}
+
 \captionsetup[figure]{
   position=bottom, margin=0mm, format=tabfigformat,
   aboveskip=6pt, belowskip=-15pt, justification=centerlast}
 \captionsetup[table]{
+  position=top, margin=0mm, format=tabfigformat,
+  aboveskip=0pt, belowskip=0pt, justification=centerlast}
+
+\captionsetup[figure][bi-first]{name=图}      %设置图的中文前缀
+\captionsetup[table][bi-first]{name=表}       %设置表的中文前缀
+\captionsetup[figure][bi-second]{name=Fig.}   %设置图的英文前缀
+\captionsetup[table][bi-second]{name=Tab.}   %设置表的英文前缀
+
+\captionsetup[figure][bi]{
+  position=bottom, margin=0mm, format=tabfigformat,
+  aboveskip=6pt, belowskip=-15pt, justification=centerlast}
+\captionsetup[table][bi]{
   position=top, margin=0mm, format=tabfigformat,
   aboveskip=0pt, belowskip=0pt, justification=centerlast}
 
@@ -436,15 +466,15 @@
     Please set defence date by 'DateDefence'.}}{}
   \ifthenelse{\equal{\@refcolor}{\empty}}{}{%
     \ifthenelse{\equal{\@refcolor}{on} \OR \equal{\@refcolor}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for refcolor.}}
+    \errmessage{Please use 'on' or 'off' for refcolor.}}
   }
   \ifthenelse{\equal{\@beginright}{\empty}}{}{%
     \ifthenelse{\equal{\@beginright}{on} \OR \equal{\@beginright}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for beginright.}}
+    \errmessage{Please use 'on' or 'off' for beginright.}}
   }
   \ifthenelse{\isundefined{\@listfigtab}}{}{%
-    \ifthenelse{\equal{\@listfigtab}{on} \OR \equal{\@listfigtab}{off}}{}{
-    \errmessage{Please use 'on' of 'off' for listfigtab.}}
+    \ifthenelse{\equal{\@listfigtab}{on} \OR \equal{\@listfigtab}{bi} \OR \equal{\@listfigtab}{off}}{}{
+    \errmessage{Please use 'on' or 'bi' or 'off' for listfigtab.}}
   }
 }
 \newcommand{\clearautopage}{%右侧起新页
@@ -873,6 +903,21 @@
       \clearpage
       \pdfbookmark[0]{表目录}{listoftables}
       \listoftables
+    }{}
+    \ifthenelse{\equal{\@listfigtab}{bi}}{%
+      \renewcommand{\addvspace}[1]{}
+      \clearpage
+      \pdfbookmark[0]{图目录}{listoffigures}
+      \listoffigures
+      \clearpage
+      \pdfbookmark[0]{List of Figures}{listoffigureEnges}
+      \listoffigureEnges
+      \clearpage
+      \pdfbookmark[0]{表目录}{listoftables}
+      \listoftables
+      \clearpage
+      \pdfbookmark[0]{List of Tables}{listoftableEnges}
+      \listoftableEnges
     }{}
   }
   \ifthenelse{\equal{\@beginright}{off}}{\clearpage}{\clearautopage}
