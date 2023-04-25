@@ -166,18 +166,34 @@
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
-% 根据不同系统调整
-\ifthenelse{\equal{\@ostype}{win}}{ % win 配置
-  \RequirePackage{times}        % Times New Roman字体
-}{}
-\ifthenelse{\equal{\@ostype}{linux}}{ % linux 配置
-  \RequirePackage{newtxtext}    % Times New Roman字体
-  \RequirePackage{newtxmath}    % 公式的Times New Roman字体 (!After package amsthm!)
-}{}
-\ifthenelse{\equal{\@ostype}{mac}}{ % mac 配置
-  \RequirePackage{times}        % Times New Roman字体
-  \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
-}{}
+% % 根据不同系统调整
+% \ifthenelse{\equal{\@ostype}{win}}{ % win 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   % 修复宋体加粗问题
+%   \setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+%   \renewcommand*{\songti}{\CJKfamily{zhsong}}
+%   \setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+%   \renewcommand*{\heiti}{\CJKfamily{zhhei}}
+% }{}
+% \ifthenelse{\equal{\@ostype}{linux}}{ % linux 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   \setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+%   \renewcommand*{\songti}{\CJKfamily{zhsong}}
+%   \setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+%   \renewcommand*{\heiti}{\CJKfamily{zhhei}}
+% }{}
+% \ifthenelse{\equal{\@ostype}{mac}}{ % mac 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
+% }{}
+
+% 统一不同系统的字体设置
+\RequirePackage{times}        % Times New Roman字体
+% 修复宋体加粗问题
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+\renewcommand*{\songti}{\CJKfamily{zhsong}}
+\setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+\renewcommand*{\heiti}{\CJKfamily{zhhei}}
 
 % 根据不同编译系统选择正确的 Times New Roman字体
 \usepackage{iftex}
