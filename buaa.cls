@@ -726,7 +726,7 @@
       \ifthenelse{\isundefined{\@cotutorcn}}{}{%
                 & \@cotutorcn & \@cotutordegree\\
       }
-      培养院系  & \multicolumn{2}{l}{\@department}
+      培养学院  & \multicolumn{2}{l}{\@department}
     \end{tabular}
   \end{spacing}
 
