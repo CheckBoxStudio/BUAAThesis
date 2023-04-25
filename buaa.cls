@@ -632,13 +632,17 @@
         afterskip=3.61pt,
     },
     subsubsection={% 附加4级标题 : 小四号宋体加粗居左
-        format=\zihao{-4} \songti \raggedright,
+        format=\zihao{-4} \songti \raggedright \bfseries,
+        nameformat=\mdseries,
+        beforeskip = 0bp, afterskip = 0bp,
     },
     paragraph={% 附加5级标题 : 小四号宋体居左
         format=\zihao{-4} \songti \raggedright,
+        beforeskip = 0bp, afterskip = 0bp,
     },
     subparagraph={% 附加6级标题 : 小四号宋体居左
         format=\zihao{-4} \songti \raggedright,
+        beforeskip = 0bp, afterskip = 0bp,
     }
 }
 
