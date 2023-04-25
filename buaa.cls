@@ -894,7 +894,7 @@
     {\zihao{3} \heiti  \centerline{摘~~~~要}}
     {\zihao{-4} \songti ~\par
       \@abstrctcn \par ~\par
-      {\heiti 关键字：} \@keywordcn
+      {\bfseries \heiti 关键词：} \heiti \@keywordcn
     }
 
     \clearpage
