@@ -166,18 +166,34 @@
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
-% 根据不同系统调整
-\ifthenelse{\equal{\@ostype}{win}}{ % win 配置
-  \RequirePackage{times}        % Times New Roman字体
-}{}
-\ifthenelse{\equal{\@ostype}{linux}}{ % linux 配置
-  \RequirePackage{newtxtext}    % Times New Roman字体
-  \RequirePackage{newtxmath}    % 公式的Times New Roman字体 (!After package amsthm!)
-}{}
-\ifthenelse{\equal{\@ostype}{mac}}{ % mac 配置
-  \RequirePackage{times}        % Times New Roman字体
-  \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
-}{}
+% % 根据不同系统调整
+% \ifthenelse{\equal{\@ostype}{win}}{ % win 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   % 修复宋体加粗问题
+%   \setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+%   \renewcommand*{\songti}{\CJKfamily{zhsong}}
+%   \setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+%   \renewcommand*{\heiti}{\CJKfamily{zhhei}}
+% }{}
+% \ifthenelse{\equal{\@ostype}{linux}}{ % linux 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   \setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+%   \renewcommand*{\songti}{\CJKfamily{zhsong}}
+%   \setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+%   \renewcommand*{\heiti}{\CJKfamily{zhhei}}
+% }{}
+% \ifthenelse{\equal{\@ostype}{mac}}{ % mac 配置
+%   \RequirePackage{times}        % Times New Roman字体
+%   \RequirePackage{fontspec}     % 字体设置 (!Only for XeLaTeX!)
+% }{}
+
+% 统一不同系统的字体设置
+\RequirePackage{times}        % Times New Roman字体
+% 修复宋体加粗问题
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+\renewcommand*{\songti}{\CJKfamily{zhsong}}
+\setCJKfamilyfont{zhhei}[AutoFakeBold = {3.17}]{SimHei}
+\renewcommand*{\heiti}{\CJKfamily{zhhei}}
 
 % 根据不同编译系统选择正确的 Times New Roman字体
 \usepackage{iftex}
@@ -331,7 +347,7 @@
 {\thecontentslabel\ \ }{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
-\titlecontents{subsection}[3em]{\settowidth{\hangindent}{\thecontentslabel\ \ }\songti\zihao{-4}}
+\titlecontents{subsection}[3em]{\settowidth{\hangindent}{\thecontentslabel\ \ }\songti\zihao{5}}
 {\thecontentslabel\ \ }{}
 {\hspace{.25em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
@@ -616,13 +632,17 @@
         afterskip=3.61pt,
     },
     subsubsection={% 附加4级标题 : 小四号宋体加粗居左
-        format=\zihao{-4} \songti \raggedright,
+        format=\zihao{-4} \songti \raggedright \bfseries,
+        nameformat=\mdseries,
+        beforeskip = 0bp, afterskip = 0bp,
     },
     paragraph={% 附加5级标题 : 小四号宋体居左
         format=\zihao{-4} \songti \raggedright,
+        beforeskip = 0bp, afterskip = 0bp,
     },
     subparagraph={% 附加6级标题 : 小四号宋体居左
         format=\zihao{-4} \songti \raggedright,
+        beforeskip = 0bp, afterskip = 0bp,
     }
 }
 
@@ -706,7 +726,7 @@
       \ifthenelse{\isundefined{\@cotutorcn}}{}{%
                 & \@cotutorcn & \@cotutordegree\\
       }
-      培养院系  & \multicolumn{2}{l}{\@department}
+      培养学院  & \multicolumn{2}{l}{\@department}
     \end{tabular}
   \end{spacing}
 
@@ -874,7 +894,7 @@
     {\zihao{3} \heiti  \centerline{摘~~~~要}}
     {\zihao{-4} \songti ~\par
       \@abstrctcn \par ~\par
-      {\heiti 关键字：} \@keywordcn
+      {\bfseries \heiti 关键词：} \heiti \@keywordcn
     }
 
     \clearpage
