@@ -126,6 +126,7 @@ For Mac: {\tt times}, {\tt fontspec}。
 \begin{itemize}
   \item[$\triangleright$] \textit{中文斜体}将转换为楷体；
   \item[$\triangleright$] \textbf{中文粗体}在Windows（From WeiQM）和Mac（From CaiBW）下转换为黑体，Linux下正常（From QiaoJF）；
+  \item[$\triangleright$] 表格环境内\verb|\textbf|为宋体加粗， \verb|\bf|为黑体；
   \item[$\triangleright$] \verb|\label{<text>}|中不能使用中文；
   \item[$\triangleright$] 浮动体与正文之间的距离是弹性的，根据内容调整，不太好控制；
   \item[$\triangleright$] 命令符与汉字之间请注意加空格以避免undefined错误（pdfLaTeX下好像一般不存在这个问题，主要在XeLaTeX编译环境下发生）；
