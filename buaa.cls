@@ -163,6 +163,7 @@
 \RequirePackage{color}        % To provide color for soul
 \RequirePackage{soul}         % To highlight text
 \RequirePackage[sort&compress]{natbib}              % BibTex
+\RequirePackage{lmodern}      % 用于消除Font shape `OMX/cmex/m/n' in size <xxxx> not available 的警告
 \DeclareGraphicsExtensions{.eps,.ps,.png,.jpg,.bmp} % 声明使用图像格式
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}}   % 高亮注释
 
@@ -684,7 +685,7 @@
     \makebox[5\ccwd][s]{中图分类号}：{\bfseries \@clc}%
     \\
     \makebox[5\ccwd][s]{论文编号}：{\bfseries 10006\@studentid}%
-    \\
+
     \TranSecretLevel{\@permission}
   }
 
@@ -765,9 +766,9 @@
     {\zihao{-3} \bfseries
       \begin{tabular}{ll}
         \ifthenelse{\isundefined{\@cotutorcn}}{%
-          \makebox[70pt][s]{Candidate}:  & \@authoren \\
+          \makebox[77pt][s]{Candidate}:  & \@authoren \\
           \vspace{-10pt}\\
-          \makebox[70pt][s]{Supervisor}: & \TranDegree{\@tutordegree} \hspace{-8pt} \@tutoren \\
+          \makebox[77pt][s]{Supervisor}: & \TranDegree{\@tutordegree} \hspace{-8pt} \@tutoren \\
         }{%
           \makebox[77pt][s]{Candidate}:  & \@authoren \\
           \vspace{-10pt}\\
@@ -856,7 +857,9 @@
     航天大学或其它教育机构的学位或学历证书而使用过的材料。与我一同工作的同志对研
     究所做的任何贡献均已在论文中作出了明确的说明。
 
-      若有不实之处，本人愿意承担相关法律责任。 \\
+      若有不实之处，本人愿意承担相关法律责任。 
+
+      \hspace*{\fill}
 
       {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd}
       日期：\hspace{3\ccwd}年\hspace{2\ccwd}月\hspace{2\ccwd}日}
@@ -872,7 +875,9 @@
     将学位论文的全部或部分内容编入有关数据库进行检索，采用影印、缩印或其他复制手
     段保存学位论文。
 
-        保密学位论文在解密后的使用授权同上。 \\
+        保密学位论文在解密后的使用授权同上。 
+
+        \hspace*{\fill}
 
         {\zihao{5}\ \ 学位论文作者签名：\underline{\hspace{7\ccwd}} \hspace{4\ccwd}
         日期：\hspace{3\ccwd}年\hspace{2\ccwd}月\hspace{2\ccwd}日}
