@@ -136,14 +136,14 @@
 \RequirePackage{ifthen}       % ifthenelse/equal/isundefined等判断比较命令
 \RequirePackage{etoolbox}     % \AtBeginDocument等宏命令
 \RequirePackage{titletoc}     % 目录
-\RequirePackage{remreset}     % 计数器设置
+%\RequirePackage{remreset}     % 计数器设置（已经在Latex内核中内置）
 \RequirePackage{geometry}     % 设置页边距
 \RequirePackage{fancyhdr}     % 设置页眉页脚
 \RequirePackage{setspace}     % 设置行间距
 \RequirePackage{float}        % 图片
 \RequirePackage{graphicx}     % 图片
 \RequirePackage{subfigure}    % 图片
-\RequirePackage{epstopdf}     % 图片
+%\RequirePackage{epstopdf}     % 图片（epstopdf在XeLatex中无效）
 \RequirePackage{array}        % 列举
 \RequirePackage{enumitem}     % 列举
 \RequirePackage{booktabs}     % 表格上下粗线
